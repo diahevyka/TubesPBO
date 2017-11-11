@@ -10,7 +10,7 @@ package Model;
  *
  * @author Windows 8.1
  */
-public class User {
+public abstract class User {
     protected String name;
     protected String address;
     protected String phone;
