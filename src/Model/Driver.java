@@ -13,7 +13,7 @@ package Model;
 public class Driver {
     private String idDriver;
     private String name;
-    private int SIMnum;
+    private String SIMnum;
     private int rentPrice;
     private boolean status;
 
@@ -37,11 +37,11 @@ public class Driver {
         this.name = name;
     }
 
-    public int getSIMnum() {
+    public String getSIMnum() {
         return SIMnum;
     }
 
-    public void setSIMnum(int SIMnum) {
+    public void setSIMnum(String SIMnum) {
         this.SIMnum = SIMnum;
     }
 
