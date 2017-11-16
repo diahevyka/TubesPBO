@@ -12,6 +12,8 @@ package rentalmobil;
  */
 
 import View.*;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 public class RentalMobil {
 
@@ -19,7 +21,10 @@ public class RentalMobil {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Main().setVisible(true);
+        Main L = new Main();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        L.setLocation(dim.width/2-L.getSize().width/2, dim.height/2-L.getSize().height/2);
+        L.setVisible(true);
     }
     
 }

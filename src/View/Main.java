@@ -106,6 +106,7 @@ public class Main extends javax.swing.JFrame {
         jFormattedTextField1.setText("jFormattedTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         bg.setBackground(new java.awt.Color(102, 102, 102));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
