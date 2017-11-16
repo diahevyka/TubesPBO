@@ -10,13 +10,16 @@ package rentalmobil;
  *
  * @author Windows 8.1
  */
+
+import View.*;
+
 public class RentalMobil {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new Main().setVisible(true);
     }
     
 }

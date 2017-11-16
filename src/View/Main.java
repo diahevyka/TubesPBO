@@ -1,4 +1,4 @@
-package co.cars.view;
+package View;
 
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -106,7 +106,6 @@ public class Main extends javax.swing.JFrame {
         jFormattedTextField1.setText("jFormattedTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         bg.setBackground(new java.awt.Color(102, 102, 102));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -602,6 +601,7 @@ public class Main extends javax.swing.JFrame {
         });
         tRent.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_NEXT_COLUMN);
         tRent.setEnabled(false);
+        tRent.setFocusable(false);
         tRent.setGridColor(new java.awt.Color(204, 204, 204));
         tRent.setRequestFocusEnabled(false);
         tRent.setRowHeight(30);
