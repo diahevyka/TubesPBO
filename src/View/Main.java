@@ -1,10 +1,8 @@
 package View;
 
-import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
-import javax.swing.JLabel;
 import javax.swing.*;
 
 public class Main extends javax.swing.JFrame {

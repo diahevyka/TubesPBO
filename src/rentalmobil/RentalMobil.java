@@ -18,8 +18,9 @@ public class RentalMobil {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
-        new main_controller();
+        new login_controller();
     }
     
 }
