@@ -375,11 +375,6 @@ public class Main extends javax.swing.JFrame {
         jEdit.setBackground(new java.awt.Color(255, 255, 255));
         jEdit.setForeground(new java.awt.Color(255, 255, 255));
         jEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jEdit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jEditMousePressed(evt);
-            }
-        });
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
@@ -757,14 +752,6 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jEditMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jEditMousePressed
-        jName.setEditable(true);
-        jEmail.setEditable(true);
-        jAddress.setEditable(true);
-        jPhone.setEditable(true);
-        jSave.setVisible(true);
-    }//GEN-LAST:event_jEditMousePressed
-
     //Navigation
     public void setColor(JPanel panel){
         panel.setBackground(new Color(204,204,204));
@@ -812,6 +799,7 @@ public class Main extends javax.swing.JFrame {
         nLend.addMouseListener(e);
         nDriver.addMouseListener(e);
         jExit.addMouseListener(e);
+        jEdit.addMouseListener(e);
     }
     
     public JLabel getBtnExit(){

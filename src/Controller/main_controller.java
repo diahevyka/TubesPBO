@@ -26,8 +26,11 @@ public class main_controller extends MouseAdapter {
     public main_controller() {
         M = new Main();
         M.addMouseAdapter(this);
+        
+        //Configure Position of Window
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         M.setLocation(dim.width/2-M.getSize().width/2, dim.height/2-M.getSize().height/2);
+        
         M.setVisible(true);
     }
     
