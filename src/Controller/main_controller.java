@@ -19,7 +19,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class main_controller extends MouseAdapter implements ActionListener {
+public class main_controller extends MouseAdapter {
     
     private Main M;
     
@@ -29,11 +29,6 @@ public class main_controller extends MouseAdapter implements ActionListener {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         M.setLocation(dim.width/2-M.getSize().width/2, dim.height/2-M.getSize().height/2);
         M.setVisible(true);
-    }
-    
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        
     }
     
     public void mousePressed(MouseEvent e){
@@ -48,7 +43,7 @@ public class main_controller extends MouseAdapter implements ActionListener {
             M.getPrent().setVisible(false);
             M.getPlend().setVisible(false);
             M.getPdriver().setVisible(false);
-        }else if (O.equals(M.getBtnrent())){
+        } else if (O.equals(M.getBtnrent())){
             M.setColor(M.getBtnrent());
             M.resetColor(M.getBtnaccount());
             M.resetColor(M.getBtnlend());
@@ -57,7 +52,7 @@ public class main_controller extends MouseAdapter implements ActionListener {
             M.getPrent().setVisible(true);
             M.getPlend().setVisible(false);
             M.getPdriver().setVisible(false);
-        }else if (O.equals(M.getBtnlend())){
+        } else if (O.equals(M.getBtnlend())){
             M.resetColor(M.getBtnrent());
             M.resetColor(M.getBtnaccount());
             M.setColor(M.getBtnlend());
@@ -66,7 +61,7 @@ public class main_controller extends MouseAdapter implements ActionListener {
             M.getPrent().setVisible(false);
             M.getPlend().setVisible(true);
             M.getPdriver().setVisible(false);
-        }else if (O.equals(M.getBtndriver())){
+        } else if (O.equals(M.getBtndriver())){
             M.resetColor(M.getBtnrent());
             M.resetColor(M.getBtnaccount());
             M.resetColor(M.getBtnlend());
@@ -75,6 +70,14 @@ public class main_controller extends MouseAdapter implements ActionListener {
             M.getPrent().setVisible(false);
             M.getPlend().setVisible(false);
             M.getPdriver().setVisible(true);
+        } else if (O.equals(M.getBtnExit())){
+            System.exit(0);
+        } else if (O.equals(M.getBtnEdit())){
+            M.getFName().setEditable(true);
+            M.getFEmail().setEditable(true);
+            M.getFAddress().setEditable(true);
+            M.getFPhone().setEditable(true);
+            M.getBtnSave().setVisible(true);
         }
     }
     

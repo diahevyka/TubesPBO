@@ -3,8 +3,9 @@ package View;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import javax.swing.JLabel;
+import javax.swing.*;
 
 public class Main extends javax.swing.JFrame {
 
@@ -39,7 +40,9 @@ public class Main extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
         bg = new javax.swing.JPanel();
+        jExit = new javax.swing.JLabel();
         Navigation = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -115,6 +118,11 @@ public class Main extends javax.swing.JFrame {
         bg.setBackground(new java.awt.Color(102, 102, 102));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jExit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jExit.setForeground(new java.awt.Color(204, 204, 204));
+        jExit.setText("   X ");
+        bg.add(jExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, 40, 40));
+
         Navigation.setBackground(new java.awt.Color(255, 255, 255));
         Navigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -135,11 +143,6 @@ public class Main extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Account");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-user-filled.png"))); // NOI18N
 
@@ -175,11 +178,6 @@ public class Main extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Rent");
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-car-filled.png"))); // NOI18N
 
@@ -218,11 +216,6 @@ public class Main extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Lend");
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel13MouseClicked(evt);
-            }
-        });
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-key.png"))); // NOI18N
 
@@ -260,11 +253,6 @@ public class Main extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Driver");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-driving (1).png"))); // NOI18N
 
@@ -342,11 +330,6 @@ public class Main extends javax.swing.JFrame {
         jName.setBorder(null);
         jName.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jName.setSelectionColor(new java.awt.Color(0, 0, 0));
-        jName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jNameActionPerformed(evt);
-            }
-        });
 
         jEmail.setBackground(new java.awt.Color(102, 102, 102));
         jEmail.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -355,11 +338,6 @@ public class Main extends javax.swing.JFrame {
         jEmail.setBorder(null);
         jEmail.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jEmail.setSelectionColor(new java.awt.Color(0, 0, 0));
-        jEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jEmailActionPerformed(evt);
-            }
-        });
 
         jAddress.setBackground(new java.awt.Color(102, 102, 102));
         jAddress.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -377,11 +355,6 @@ public class Main extends javax.swing.JFrame {
         jPhone.setCaretColor(new java.awt.Color(51, 51, 51));
         jPhone.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPhone.setSelectionColor(new java.awt.Color(0, 0, 0));
-        jPhone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPhoneActionPerformed(evt);
-            }
-        });
 
         jSeparator1.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
@@ -401,6 +374,7 @@ public class Main extends javax.swing.JFrame {
 
         jEdit.setBackground(new java.awt.Color(255, 255, 255));
         jEdit.setForeground(new java.awt.Color(255, 255, 255));
+        jEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jEdit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jEditMousePressed(evt);
@@ -434,6 +408,7 @@ public class Main extends javax.swing.JFrame {
 
         jSave.setBackground(new java.awt.Color(255, 255, 255));
         jSave.setForeground(new java.awt.Color(255, 255, 255));
+        jSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jSave.setPreferredSize(new java.awt.Dimension(85, 42));
 
         jLabel21.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -782,34 +757,6 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        
-    }//GEN-LAST:event_jLabel3MouseClicked
-
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel6MouseClicked
-
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel9MouseClicked
-
-    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel13MouseClicked
-
-    private void jPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPhoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPhoneActionPerformed
-
-    private void jNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jNameActionPerformed
-
-    private void jEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jEmailActionPerformed
-
     private void jEditMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jEditMousePressed
         jName.setEditable(true);
         jEmail.setEditable(true);
@@ -818,8 +765,7 @@ public class Main extends javax.swing.JFrame {
         jSave.setVisible(true);
     }//GEN-LAST:event_jEditMousePressed
 
-    
-    
+    //Navigation
     public void setColor(JPanel panel){
         panel.setBackground(new Color(204,204,204));
     }
@@ -828,7 +774,6 @@ public class Main extends javax.swing.JFrame {
         panel.setBackground(new Color(255,255,255));
     }
     
-    //Navigation
     public JPanel getBtnaccount(){
         return nAccount;
     } 
@@ -866,8 +811,39 @@ public class Main extends javax.swing.JFrame {
         nRent.addMouseListener(e);
         nLend.addMouseListener(e);
         nDriver.addMouseListener(e);
+        jExit.addMouseListener(e);
+    }
+    
+    public JLabel getBtnExit(){
+        return jExit;
     }
     //End Navigation
+    
+    //Panel Account
+    public JTextField getFName(){
+        return jName;
+    }
+    
+    public JTextField getFEmail(){
+        return jEmail;
+    }
+    
+    public JTextField getFAddress(){
+        return jAddress;
+    }
+    
+    public JTextField getFPhone(){
+        return jPhone;
+    }
+    
+    public JPanel getBtnEdit(){
+        return jEdit;
+    }
+    
+    public JPanel getBtnSave(){
+        return jSave;
+    }
+    //End Panel Account
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Navigation;
@@ -876,6 +852,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField jAddress;
     private javax.swing.JPanel jEdit;
     private javax.swing.JTextField jEmail;
+    private javax.swing.JLabel jExit;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -910,6 +887,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jSave;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
