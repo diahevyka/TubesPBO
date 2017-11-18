@@ -3,6 +3,8 @@ package View;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 
 public class Main extends javax.swing.JFrame {
 
@@ -13,12 +15,14 @@ public class Main extends javax.swing.JFrame {
         jAddress.setEditable(false);
         jPhone.setEditable(false);
         jSave.setVisible(false);
+        
         //Table Rent
         tRent.getTableHeader().setPreferredSize(new Dimension(tRent.getTableHeader().getWidth(), 35));
         tRent.getTableHeader().setBackground(new Color(102,102,102));
         tRent.getTableHeader().setForeground(new Color(255,255,255));
         tRent.getTableHeader().setBorder(null);
         tRent.getColumnModel().getColumn(0).setPreferredWidth(100);
+        
         //Table Lend
         tLend.getTableHeader().setPreferredSize(new Dimension(tRent.getTableHeader().getWidth(), 35));
         tLend.getTableHeader().setBackground(new Color(102,102,102));
@@ -125,11 +129,6 @@ public class Main extends javax.swing.JFrame {
 
         nAccount.setBackground(new java.awt.Color(204, 204, 204));
         nAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        nAccount.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                nAccountMousePressed(evt);
-            }
-        });
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -170,11 +169,6 @@ public class Main extends javax.swing.JFrame {
         nRent.setBackground(new java.awt.Color(255, 255, 255));
         nRent.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nRent.setPreferredSize(new java.awt.Dimension(124, 54));
-        nRent.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                nRentMousePressed(evt);
-            }
-        });
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -218,11 +212,6 @@ public class Main extends javax.swing.JFrame {
         nLend.setBackground(new java.awt.Color(255, 255, 255));
         nLend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nLend.setPreferredSize(new java.awt.Dimension(124, 54));
-        nLend.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                nLendMousePressed(evt);
-            }
-        });
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -265,11 +254,6 @@ public class Main extends javax.swing.JFrame {
         nDriver.setBackground(new java.awt.Color(255, 255, 255));
         nDriver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nDriver.setPreferredSize(new java.awt.Dimension(124, 54));
-        nDriver.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                nDriverMousePressed(evt);
-            }
-        });
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -802,55 +786,17 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jLabel3MouseClicked
 
-    private void nAccountMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nAccountMousePressed
-        setColor(nAccount);
-        resetColor(nRent);
-        resetColor(nDriver);
-        resetColor(nLend);
-        pAccount.setVisible(true);
-        pRent.setVisible(false);
-        pLend.setVisible(false);
-    }//GEN-LAST:event_nAccountMousePressed
-
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel6MouseClicked
-
-    private void nRentMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nRentMousePressed
-        setColor(nRent);
-        resetColor(nAccount);
-        resetColor(nDriver);
-        resetColor(nLend);
-        pAccount.setVisible(false);
-        pRent.setVisible(true);
-        pLend.setVisible(false);
-    }//GEN-LAST:event_nRentMousePressed
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel9MouseClicked
 
-    private void nDriverMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nDriverMousePressed
-        setColor(nDriver);
-        resetColor(nRent);
-        resetColor(nAccount);
-        resetColor(nLend);
-        
-    }//GEN-LAST:event_nDriverMousePressed
-
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel13MouseClicked
-
-    private void nLendMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nLendMousePressed
-        setColor(nLend);
-        resetColor(nRent);
-        resetColor(nAccount);
-        resetColor(nDriver);
-        pAccount.setVisible(false);
-        pRent.setVisible(false);
-        pLend.setVisible(true);
-    }//GEN-LAST:event_nLendMousePressed
 
     private void jPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPhoneActionPerformed
         // TODO add your handling code here:
@@ -872,50 +818,56 @@ public class Main extends javax.swing.JFrame {
         jSave.setVisible(true);
     }//GEN-LAST:event_jEditMousePressed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Main().setVisible(true);
-            }
-        });
-    }
     
-    void setColor(JPanel panel){
+    
+    public void setColor(JPanel panel){
         panel.setBackground(new Color(204,204,204));
     }
     
-    void resetColor(JPanel panel){
+    public void resetColor(JPanel panel){
         panel.setBackground(new Color(255,255,255));
     }
-
     
+    //Navigation
+    public JPanel getBtnaccount(){
+        return nAccount;
+    } 
+    
+    public JPanel getBtnrent(){
+        return nRent;
+    }
+    
+    public JPanel getBtnlend(){
+        return nLend;
+    }
+    
+    public JPanel getBtndriver(){
+        return nDriver;
+    }
+    
+    public JPanel getPaccount(){
+        return pAccount;
+    }
+
+    public JPanel getPrent(){
+        return pRent;
+    }
+    
+    public JPanel getPlend(){
+        return pLend;
+    }
+    
+    public JPanel getPdriver(){
+        return pDriver;
+    }
+    
+    public void addMouseAdapter(MouseAdapter e){
+        nAccount.addMouseListener(e);
+        nRent.addMouseListener(e);
+        nLend.addMouseListener(e);
+        nDriver.addMouseListener(e);
+    }
+    //End Navigation
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Navigation;

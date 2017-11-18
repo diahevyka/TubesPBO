@@ -1,0 +1,81 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Controller;
+
+/**
+ *
+ * @author Atta
+ */
+
+import Model.*;
+import View.*;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+public class main_controller extends MouseAdapter implements ActionListener {
+    
+    private Main M;
+    
+    public main_controller() {
+        M = new Main();
+        M.addMouseAdapter(this);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        M.setLocation(dim.width/2-M.getSize().width/2, dim.height/2-M.getSize().height/2);
+        M.setVisible(true);
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+    }
+    
+    public void mousePressed(MouseEvent e){
+        Object O = e.getSource();
+        
+        if (O.equals(M.getBtnaccount())){
+            M.setColor(M.getBtnaccount());
+            M.resetColor(M.getBtnrent());
+            M.resetColor(M.getBtnlend());
+            M.resetColor(M.getBtndriver());
+            M.getPaccount().setVisible(true);
+            M.getPrent().setVisible(false);
+            M.getPlend().setVisible(false);
+            M.getPdriver().setVisible(false);
+        }else if (O.equals(M.getBtnrent())){
+            M.setColor(M.getBtnrent());
+            M.resetColor(M.getBtnaccount());
+            M.resetColor(M.getBtnlend());
+            M.resetColor(M.getBtndriver());
+            M.getPaccount().setVisible(false);
+            M.getPrent().setVisible(true);
+            M.getPlend().setVisible(false);
+            M.getPdriver().setVisible(false);
+        }else if (O.equals(M.getBtnlend())){
+            M.resetColor(M.getBtnrent());
+            M.resetColor(M.getBtnaccount());
+            M.setColor(M.getBtnlend());
+            M.resetColor(M.getBtndriver());
+            M.getPaccount().setVisible(false);
+            M.getPrent().setVisible(false);
+            M.getPlend().setVisible(true);
+            M.getPdriver().setVisible(false);
+        }else if (O.equals(M.getBtndriver())){
+            M.resetColor(M.getBtnrent());
+            M.resetColor(M.getBtnaccount());
+            M.resetColor(M.getBtnlend());
+            M.setColor(M.getBtndriver());
+            M.getPaccount().setVisible(false);
+            M.getPrent().setVisible(false);
+            M.getPlend().setVisible(false);
+            M.getPdriver().setVisible(true);
+        }
+    }
+    
+}
