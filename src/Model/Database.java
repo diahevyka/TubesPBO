@@ -17,8 +17,9 @@ import java.sql.DriverManager;
 public class Database {
     public static Connection con;
     public static Statement stm;
-    public static void main(String args[]){
-        try {
+    
+    public void config() {
+     try {
             String url ="jdbc:mysql://localhost/RentalMobil";
             String user="root";
             String pass="";
