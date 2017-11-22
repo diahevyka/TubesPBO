@@ -20,6 +20,7 @@ public class Rent implements Price{
     private Employee employee;
     private Cars car;
     private Driver driver;
+    private double price;
 
     public Rent(String idTransaction, Date borrowDate, Date returnDate, Customer customer, Employee employee, Cars car, Driver driver) {
         this.idTransaction = idTransaction;
@@ -70,6 +71,11 @@ public class Rent implements Price{
     @Override
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
     }
     
     

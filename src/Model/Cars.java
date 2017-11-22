@@ -10,17 +10,20 @@ package Model;
  *
  * @author Windows 8.1
  */
+
+
 public class Cars implements Price{
     private String idCar;
     private boolean status;
     private Type type;
     private Merk merk;
+    private double price;
 
     public Cars(String idCar, double rentPrice, Type type, Merk merk) {
         this.idCar = idCar;
-        
         this.type = type;
         this.merk = merk;
+        this.price = rentPrice;
     }
 
     public void setIdCar(String idCar) {
@@ -49,6 +52,11 @@ public class Cars implements Price{
 
     public Merk getMerk() {
         return merk;
+    }
+    
+    @Override
+    public void setPrice(double price){
+        
     }
     
 }

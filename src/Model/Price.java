@@ -11,7 +11,8 @@ package Model;
  * @author Windows 8.1
  */
 public interface Price {
-    double price=0;
     
     public double getPrice();
+    
+    public void setPrice(double price);
 }
