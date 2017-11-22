@@ -6,18 +6,18 @@
 
 package Model;
 
-import static Model.Price.price;
 import java.util.Date;
 
 /**
  *
  * @author Windows 8.1
  */
-public class Lend {
+public class Lend implements Price {
     private String idLend;
     private Date lendDate;
     private Owner owner;
     private Cars car;
+    private double price;
 
     public Lend(String idLend, Date lendDate, Owner owner, Cars car) {
         this.idLend = idLend;
@@ -38,7 +38,14 @@ public class Lend {
         return lendDate;
     }
     
+   
+    
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
