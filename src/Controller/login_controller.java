@@ -53,31 +53,31 @@ public class login_controller extends MouseAdapter {
         Object O = e.getSource();
         if (O.equals(L.getTUsername())){
             L.getTUsername().setText("");
+            L.getErrorMassage().setText("");
         } else if (O.equals(L.getTPassword())){
             L.getTPassword().setText("");
+            L.getErrorMassage().setText("");
         } else if (O.equals(L.getTExit())){
             System.exit(0);
         } else if (O.equals(L.BtnLogin())){
-            L.setVisible(false);
             ac.setUserName(L.getTUsername().getText());
             ac.setPassword(L.getTPassword().getText());
-            
             try{
-                
                 sql = "Select * from account where UserName='"+ac.getUserName()+"' And password='"+ac.getPassword()+"'";
                 rs = stat.executeQuery(sql);
-                System.out.println(ac.getPassword());
                 if(rs.next()){
                     if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
                         L.setVisible(false);
                         new main_controller();
                     }
                     else{
-                        JOptionPane.showMessageDialog(null, "username atau password salah");
+                        
                     }
+                } else {
+                    L.getErrorMassage().setText("Invalid Username or Password");
                 }
             }catch(Exception ex){
-               
+                
             }
         } else if (O.equals(L.BtnRegister())){
             L.setVisible(false);

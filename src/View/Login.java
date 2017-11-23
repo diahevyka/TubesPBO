@@ -36,6 +36,7 @@ public class Login extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        ErrorMassage = new javax.swing.JLabel();
         jLogin = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jRegister = new javax.swing.JPanel();
@@ -79,6 +80,8 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-lock.png"))); // NOI18N
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-user (2).png"))); // NOI18N
+
+        ErrorMassage.setForeground(new java.awt.Color(255, 255, 255));
 
         jLogin.setBackground(new java.awt.Color(255, 255, 255));
         jLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -169,7 +172,10 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jSeparator2)
                             .addComponent(jPassword))
                         .addGap(41, 41, 41))
-                    .addComponent(jExit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jExit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
+                        .addComponent(ErrorMassage)
+                        .addGap(100, 100, 100))))
         );
         loginLayout.setVerticalGroup(
             loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,11 +197,13 @@ public class Login extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2))
-                .addGap(56, 56, 56)
+                .addGap(22, 22, 22)
+                .addComponent(ErrorMassage)
+                .addGap(18, 18, 18)
                 .addComponent(jLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRegister, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jPanel1.add(login, "card2");
@@ -279,6 +287,10 @@ public class Login extends javax.swing.JFrame {
         return jExit;
     }
     
+    public JLabel getErrorMassage(){
+        return  ErrorMassage;
+    }
+    
     public void addMouseAdapter(MouseAdapter e){
         jUsername.addMouseListener(e);
         jPassword.addMouseListener(e);
@@ -287,8 +299,8 @@ public class Login extends javax.swing.JFrame {
         jRegister.addMouseListener(e);
     }
     
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ErrorMassage;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel jExit;
     private javax.swing.JLabel jLabel1;
