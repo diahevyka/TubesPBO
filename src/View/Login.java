@@ -291,6 +291,14 @@ public class Login extends javax.swing.JFrame {
         return  ErrorMassage;
     }
     
+    public JPanel getLogin(){
+        return login;
+    }
+    
+    public JPanel getLoader(){
+        return loader;
+    }
+    
     public void addMouseAdapter(MouseAdapter e){
         jUsername.addMouseListener(e);
         jPassword.addMouseListener(e);

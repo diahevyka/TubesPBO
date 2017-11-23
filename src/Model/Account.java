@@ -13,7 +13,6 @@ package Model;
 public class Account {
     private String userName;
     private String password;
-    Database db = null;
 
     public Account() {
     }

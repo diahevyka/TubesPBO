@@ -16,18 +16,21 @@ import Model.Database;
 import View.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import javax.swing.Timer;
 
 public class login_controller extends MouseAdapter {
     
     private Login L;
-    private Login view;
     private Account ac;
+    private Loading Lo;
     String sql;
     Connection con;
     Statement stat;
@@ -36,6 +39,7 @@ public class login_controller extends MouseAdapter {
     
     public login_controller(){
         L = new Login();
+        Lo = new Loading();
         L.addMouseAdapter(this);
         ac = new Account();
         Database db = new Database();
@@ -68,7 +72,15 @@ public class login_controller extends MouseAdapter {
                 if(rs.next()){
                     if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
                         L.setVisible(false);
-                        new main_controller();
+                        Lo.setVisible(true);
+                        Timer timer = new Timer(2500, new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                Lo.setVisible(false);
+                                new main_controller();
+                            } 
+                        });
+                        timer.start();
                     }
                     else{
                         

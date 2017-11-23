@@ -15,16 +15,23 @@ public class Employee extends User{
     private String email;
     private Account account;
 
-    public Employee(String idEmployee, String name, String email, String address, String phone) {
+    public Employee(String username, String password, String name, String email, String address, String phone, String idEmployee) {
         super(name, address, phone);
+        account = new Account(username,password);
+        this.email = email;
+        setIdEmployee(idEmployee);
     }
 
     public String getIdEmployee() {
         return idEmployee;
     }
-
-    public void setIdEmployee(String idEmployee) {
+    
+    public void setIdEmployee(String idEmployee){
         this.idEmployee = idEmployee;
+    }
+    
+    public Account getAccount(){
+        return account;
     }
     
 }

@@ -32,7 +32,7 @@ public class Cars implements Price{
     }
     
     public double getPrice() {
-        return price;
+        return 0;
     }
 
     public void setStatus(boolean status) {
@@ -49,6 +49,11 @@ public class Cars implements Price{
 
     public Merk getMerk() {
         return merk;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        
     }
     
 }
