@@ -73,7 +73,7 @@ public class login_controller extends MouseAdapter {
                     if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
                         L.setVisible(false);
                         Lo.setVisible(true);
-                        Timer timer = new Timer(2500, new ActionListener() {
+                        Timer timer = new Timer(3000, new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
                                 Lo.setVisible(false);
