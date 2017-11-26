@@ -6,8 +6,7 @@
 package View;
 
 import java.awt.event.MouseAdapter;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 /**
  *
@@ -334,6 +333,10 @@ public class Register extends javax.swing.JFrame {
         return jRegister;
     }
     
+    public JLabel BtnExit(){
+        return jExit;
+    }
+    
     public void addMouseAdapter(MouseAdapter e){
         jRegister.addMouseListener(e);
         jUsername.addMouseListener(e);
@@ -342,6 +345,7 @@ public class Register extends javax.swing.JFrame {
         jAddress.addMouseListener(e);
         jPhone.addMouseListener(e);
         jPassword.addMouseListener(e);
+        jExit.addMouseListener(e);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

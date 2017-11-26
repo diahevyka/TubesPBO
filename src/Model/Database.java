@@ -9,6 +9,7 @@ package Model;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 import java.sql.DriverManager;
+import View.*;
 
 /**
  *
@@ -17,8 +18,10 @@ import java.sql.DriverManager;
 public class Database {
     public static Connection con;
     public static Statement stm;
+    ErrorMassage EM = new ErrorMassage();
+    public boolean connect_status = false;
     
-    public void config() {
+    public void connect() {
      try {
             String url ="jdbc:mysql://localhost/RentalMobil";
             String user="root";
@@ -26,9 +29,9 @@ public class Database {
             Class.forName("com.mysql.jdbc.Driver");
             con =(Connection) DriverManager.getConnection(url,user,pass);
             stm = (Statement) con.createStatement();
-            System.out.println("koneksi berhasil;");
+            connect_status = true;
         } catch (Exception e) {
-            System.err.println("koneksi gagal" +e.getMessage());
+            connect_status = false;
         }
     }
 }

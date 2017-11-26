@@ -88,7 +88,7 @@ public class Main extends javax.swing.JFrame {
         pLend = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tLend = new javax.swing.JTable();
-        jPanel8 = new javax.swing.JPanel();
+        newLend = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         pDriver = new javax.swing.JPanel();
@@ -138,7 +138,6 @@ public class Main extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Account");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -173,7 +172,6 @@ public class Main extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Rent");
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -200,7 +198,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(nRentLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         Navigation.add(nRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 200, 59));
@@ -211,7 +209,6 @@ public class Main extends javax.swing.JFrame {
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Lend");
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -233,7 +230,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nLendLayout.createSequentialGroup()
                 .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nLendLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -248,7 +245,6 @@ public class Main extends javax.swing.JFrame {
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Driver");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -270,7 +266,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nDriverLayout.createSequentialGroup()
                 .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nDriverLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -326,7 +322,6 @@ public class Main extends javax.swing.JFrame {
         jName.setForeground(new java.awt.Color(255, 255, 255));
         jName.setText("Muhammad Hatta");
         jName.setBorder(null);
-        jName.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jName.setSelectionColor(new java.awt.Color(0, 0, 0));
 
         jEmail.setBackground(new java.awt.Color(102, 102, 102));
@@ -334,7 +329,6 @@ public class Main extends javax.swing.JFrame {
         jEmail.setForeground(new java.awt.Color(255, 255, 255));
         jEmail.setText("hatta.eka.p@gmail.com");
         jEmail.setBorder(null);
-        jEmail.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jEmail.setSelectionColor(new java.awt.Color(0, 0, 0));
 
         jAddress.setBackground(new java.awt.Color(102, 102, 102));
@@ -342,7 +336,6 @@ public class Main extends javax.swing.JFrame {
         jAddress.setForeground(new java.awt.Color(255, 255, 255));
         jAddress.setText("Wisma Annafi");
         jAddress.setBorder(null);
-        jAddress.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jAddress.setSelectionColor(new java.awt.Color(0, 0, 0));
 
         jPhone.setBackground(new java.awt.Color(102, 102, 102));
@@ -351,23 +344,18 @@ public class Main extends javax.swing.JFrame {
         jPhone.setText("081221447275");
         jPhone.setBorder(null);
         jPhone.setCaretColor(new java.awt.Color(51, 51, 51));
-        jPhone.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         jPhone.setSelectionColor(new java.awt.Color(0, 0, 0));
 
         jSeparator1.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
 
-        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
 
-        jSeparator5.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
 
         jEdit.setBackground(new java.awt.Color(255, 255, 255));
@@ -375,7 +363,6 @@ public class Main extends javax.swing.JFrame {
         jEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("EDIT DATA");
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-edit-filled (2).png"))); // NOI18N
@@ -405,7 +392,6 @@ public class Main extends javax.swing.JFrame {
         jSave.setPreferredSize(new java.awt.Dimension(85, 42));
 
         jLabel21.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setText("SAVE");
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-save-filled.png"))); // NOI18N
@@ -559,7 +545,6 @@ public class Main extends javax.swing.JFrame {
         tRent.setRequestFocusEnabled(false);
         tRent.setRowHeight(30);
         tRent.setSelectionBackground(new java.awt.Color(102, 102, 102));
-        tRent.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tRent);
         if (tRent.getColumnModel().getColumnCount() > 0) {
             tRent.getColumnModel().getColumn(0).setResizable(false);
@@ -576,7 +561,6 @@ public class Main extends javax.swing.JFrame {
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/PLUS.png"))); // NOI18N
 
         jLabel24.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setText("NEW");
 
         javax.swing.GroupLayout bNewLayout = new javax.swing.GroupLayout(bNew);
@@ -658,7 +642,6 @@ public class Main extends javax.swing.JFrame {
         tLend.setRequestFocusEnabled(false);
         tLend.setRowHeight(30);
         tLend.setSelectionBackground(new java.awt.Color(102, 102, 102));
-        tLend.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jScrollPane2.setViewportView(tLend);
         if (tLend.getColumnModel().getColumnCount() > 0) {
             tLend.getColumnModel().getColumn(0).setResizable(false);
@@ -668,30 +651,29 @@ public class Main extends javax.swing.JFrame {
             tLend.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        newLend.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/PLUS.png"))); // NOI18N
 
         jLabel26.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
         jLabel26.setText("NEW");
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        javax.swing.GroupLayout newLendLayout = new javax.swing.GroupLayout(newLend);
+        newLend.setLayout(newLendLayout);
+        newLendLayout.setHorizontalGroup(
+            newLendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newLendLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel25)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel26)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        newLendLayout.setVerticalGroup(
+            newLendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(newLendLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(newLendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -704,7 +686,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pLendLayout.createSequentialGroup()
                 .addContainerGap(22, Short.MAX_VALUE)
                 .addGroup(pLendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(newLend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 566, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
@@ -712,7 +694,7 @@ public class Main extends javax.swing.JFrame {
             pLendLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pLendLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(newLend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(347, Short.MAX_VALUE))
@@ -791,6 +773,10 @@ public class Main extends javax.swing.JFrame {
         return pDriver;
     }
     
+    public JPanel getBtnnewLend(){
+        return newLend;
+    }
+    
     public void addMouseAdapter(MouseAdapter e){
         
         nAccount.addMouseListener(e);
@@ -799,6 +785,8 @@ public class Main extends javax.swing.JFrame {
         nDriver.addMouseListener(e);
         jExit.addMouseListener(e);
         jEdit.addMouseListener(e);
+        newLend.addMouseListener(e);
+        
     }
     
     public JLabel getBtnExit(){
@@ -868,7 +856,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JTextField jName;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JTextField jPhone;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JPanel jSave;
@@ -885,6 +872,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel nDriver;
     private javax.swing.JPanel nLend;
     private javax.swing.JPanel nRent;
+    private javax.swing.JPanel newLend;
     private javax.swing.JPanel pAccount;
     private javax.swing.JPanel pDriver;
     private javax.swing.JPanel pLend;

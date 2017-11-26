@@ -11,46 +11,49 @@ package Controller;
  * @author Atta
  */
 
-import Model.Account;
-import Model.Database;
+import Model.*;
 import View.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import javax.swing.JOptionPane;
+import java.awt.event.*;
+import java.sql.*;
 import javax.swing.Timer;
 
 public class login_controller extends MouseAdapter {
     
     private Login L;
+    private Loading Lo = new Loading();
     private Account ac;
-    private Loading Lo;
-    String sql;
-    Connection con;
-    Statement stat;
-    ResultSet rs;
+    private String sql;
+    private Connection con;
+    private Statement stat;
+    private ResultSet rs;
+    private main_controller main;
     
     
     public login_controller(){
-        L = new Login();
-        Lo = new Loading();
-        L.addMouseAdapter(this);
-        ac = new Account();
+        
         Database db = new Database();
-        db.config();
+        
+        db.connect();
         con = db.con;
         stat = db.stm;
-        //Configure Position of Window
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        L.setLocation(dim.width/2-L.getSize().width/2, dim.height/2-L.getSize().height/2);
         
-        L.setVisible(true);
+        if (db.connect_status) {
+            L = new Login();
+            ac = new Account();
+            L.addMouseAdapter(this);
+        
+            //Configure Position of Window
+            Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+            L.setLocation(dim.width/2-L.getSize().width/2, dim.height/2-L.getSize().height/2);
+
+            L.setVisible(true);
+        } else {
+            new ErrorMassage().setVisible(true);
+        }
+        
+       
     }
     
     public void mousePressed(MouseEvent e){
@@ -72,15 +75,7 @@ public class login_controller extends MouseAdapter {
                 if(rs.next()){
                     if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
                         L.setVisible(false);
-                        Lo.setVisible(true);
-                        Timer timer = new Timer(3000, new ActionListener() {
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                Lo.setVisible(false);
-                                new main_controller();
-                            } 
-                        });
-                        timer.start();
+                        new main_controller();
                     }
                     else{
                         

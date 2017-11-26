@@ -35,6 +35,8 @@ public class register_controller extends MouseAdapter {
         Object O = e.getSource();
         if (O.equals(R.BtnRegister())){
             
+            R.setVisible(false);
+            new login_controller();
         } else if (O.equals(R.getTUsername())){
             R.getTUsername().setText("");
         } else if (O.equals(R.getTName())){
@@ -47,6 +49,8 @@ public class register_controller extends MouseAdapter {
             R.getTPhone().setText("");
         } else if (O.equals(R.getTPassword())){
             R.getTPassword().setText("");
+        } else if(O.equals(R.BtnExit())){
+            System.exit(0);
         }
     }
 }

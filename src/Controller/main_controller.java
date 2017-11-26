@@ -14,8 +14,7 @@ import Model.*;
 import View.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class main_controller extends MouseAdapter {
     
@@ -30,6 +29,10 @@ public class main_controller extends MouseAdapter {
         M.setLocation(dim.width/2-M.getSize().width/2, dim.height/2-M.getSize().height/2);
         
         M.setVisible(true);
+    }
+    
+    public Main getMain(){
+        return M;
     }
     
     public void mousePressed(MouseEvent e){
@@ -79,6 +82,9 @@ public class main_controller extends MouseAdapter {
             M.getFAddress().setEditable(true);
             M.getFPhone().setEditable(true);
             M.getBtnSave().setVisible(true);
+        } else if (O.equals(M.getBtnnewLend())){
+            M.setVisible(false);
+            new New_Lend().setVisible(true);
         }
     }
     
