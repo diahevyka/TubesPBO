@@ -778,7 +778,6 @@ public class Main extends javax.swing.JFrame {
     }
     
     public void addMouseAdapter(MouseAdapter e){
-        
         nAccount.addMouseListener(e);
         nRent.addMouseListener(e);
         nLend.addMouseListener(e);

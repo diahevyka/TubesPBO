@@ -14,13 +14,12 @@ import java.util.Date;
  */
 public class Lend implements Price {
     private String idLend;
-    private Date lendDate;
+    private String lendDate;
     private Owner owner;
     private Cars car;
     private double price;
 
-    public Lend(String idLend, Date lendDate, Owner owner, Cars car) {
-        this.idLend = idLend;
+    public Lend(String lendDate, Owner owner, Cars car) {
         this.lendDate = lendDate;
         this.owner = owner;
         this.car = car;
@@ -34,7 +33,7 @@ public class Lend implements Price {
         this.idLend = idLend;
     }
 
-    public Date getLendDate() {
+    public String getLendDate() {
         return lendDate;
     }
     
