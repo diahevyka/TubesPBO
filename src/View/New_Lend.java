@@ -271,6 +271,7 @@ public class New_Lend extends javax.swing.JFrame {
         tEmail.setForeground(new java.awt.Color(255, 255, 255));
         tEmail.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
         tEmail.setCaretColor(new java.awt.Color(255, 255, 255));
+        tEmail.setPreferredSize(new java.awt.Dimension(259, 20));
         tEmail.setSelectedTextColor(new java.awt.Color(102, 102, 102));
         tEmail.setSelectionColor(new java.awt.Color(204, 204, 204));
         tEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -331,6 +332,8 @@ public class New_Lend extends javax.swing.JFrame {
         jError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-attention-20.png"))); // NOI18N
         jError.setText("Please Fill All Field");
 
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -339,7 +342,7 @@ public class New_Lend extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 384, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
@@ -354,7 +357,7 @@ public class New_Lend extends javax.swing.JFrame {
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addGap(114, 114, 114)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(142, 142, 142))
+                                .addGap(144, 144, 144))
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel4)
@@ -363,18 +366,18 @@ public class New_Lend extends javax.swing.JFrame {
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel14))
                                 .addGap(18, 18, 18)
-                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(tPhone)
-                                    .addComponent(tName)
-                                    .addComponent(tEmail)
-                                    .addComponent(tAddress)
-                                    .addComponent(tNoktp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(63, 63, 63)))
+                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(tPhone)
+                                        .addComponent(tEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(tAddress))
+                                    .addComponent(tName, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tNoktp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(bgLayout.createSequentialGroup()
                         .addGap(159, 159, 159)
-                        .addComponent(jError)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jError)))
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bgLayout.createSequentialGroup()
                         .addGap(145, 145, 145)
@@ -406,13 +409,13 @@ public class New_Lend extends javax.swing.JFrame {
                                     .addComponent(tMerk)
                                     .addComponent(tType)
                                     .addComponent(tNoplat, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bgLayout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(49, 49, 49)
@@ -435,8 +438,8 @@ public class New_Lend extends javax.swing.JFrame {
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
                             .addComponent(tPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(34, 34, 34)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
                 .addComponent(jError)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()

@@ -264,7 +264,8 @@ public class Login extends javax.swing.JFrame {
             .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(402, 392));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     public JTextField getTUsername(){

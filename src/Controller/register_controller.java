@@ -16,25 +16,43 @@ import View.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
+import Model.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class register_controller extends MouseAdapter {
     private Register R;
+    private Database db = new Database();
+    private String sql;
+    private Connection conn = db.con;
+    private Employee employee;
+    private Statement statement = db.stm;
     
     public register_controller(){
         R = new Register();
         R.addMouseAdapter(this);
-        
-        //Configure Position of Window
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        R.setLocation(dim.width/2-R.getSize().width/2, dim.height/2-R.getSize().height/2);
-        
         R.setVisible(true);
     }
     
     public void mousePressed(MouseEvent e){
         Object O = e.getSource();
         if (O.equals(R.BtnRegister())){
-            
+            try {
+                employee = new Employee(R.getTUsername().getText(),R.getTPassword().getText(),R.getTName().getText(),R.getTEmail().getText(),R.getTAddress().getText(),R.getTPhone().getText());
+                String username = employee.getAccount().getUserName();
+                String password = employee.getAccount().getPassword();
+                sql = "INSERT INTO account " + " VALUES ('"+ username +"','"+ password +"')";
+                statement = conn.createStatement();
+                statement.executeUpdate(sql);
+                sql = "INSERT INTO employee " + " VALUES ('"+ username + "', '"+ employee.getName() +"', '"+ employee.getEmail() +"', '"+ employee.getAddress() +"','"+ employee.getPhone() +"')";
+                statement.executeUpdate(sql);
+            } catch (Exception ex) {
+                System.out.println(ex);
+            }
             R.setVisible(false);
             new login_controller();
         } else if (O.equals(R.getTUsername())){

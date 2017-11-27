@@ -43,11 +43,6 @@ public class login_controller extends MouseAdapter {
             L = new Login();
             ac = new Account();
             L.addMouseAdapter(this);
-        
-            //Configure Position of Window
-            Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-            L.setLocation(dim.width/2-L.getSize().width/2, dim.height/2-L.getSize().height/2);
-
             L.setVisible(true);
         } else {
             new ErrorMassage().setVisible(true);

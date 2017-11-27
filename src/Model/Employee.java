@@ -15,11 +15,10 @@ public class Employee extends User{
     private String email;
     private Account account;
 
-    public Employee(String username, String password, String name, String email, String address, String phone, String idEmployee) {
+    public Employee(String username, String password, String name, String email, String address, String phone) {
         super(name, address, phone);
         account = new Account(username,password);
         this.email = email;
-        setIdEmployee(idEmployee);
     }
 
     public String getIdEmployee() {
@@ -33,5 +32,10 @@ public class Employee extends User{
     public Account getAccount(){
         return account;
     }
+    
+    public String getEmail(){
+        return email;
+    }
+    
     
 }

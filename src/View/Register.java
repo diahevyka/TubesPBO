@@ -97,6 +97,7 @@ public class Register extends javax.swing.JFrame {
         jUsername.setText("username");
         jUsername.setToolTipText("");
         jUsername.setBorder(null);
+        jUsername.setCaretColor(new java.awt.Color(255, 255, 255));
         jUsername.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
@@ -108,6 +109,7 @@ public class Register extends javax.swing.JFrame {
         jName.setText("name");
         jName.setToolTipText("");
         jName.setBorder(null);
+        jName.setCaretColor(new java.awt.Color(255, 255, 255));
         jName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
@@ -121,6 +123,7 @@ public class Register extends javax.swing.JFrame {
         jEmail.setText("email");
         jEmail.setToolTipText("");
         jEmail.setBorder(null);
+        jEmail.setCaretColor(new java.awt.Color(255, 255, 255));
         jEmail.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
@@ -134,6 +137,7 @@ public class Register extends javax.swing.JFrame {
         jAddress.setText("address");
         jAddress.setToolTipText("");
         jAddress.setBorder(null);
+        jAddress.setCaretColor(new java.awt.Color(255, 255, 255));
         jAddress.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
@@ -147,6 +151,7 @@ public class Register extends javax.swing.JFrame {
         jPhone.setText("phone");
         jPhone.setToolTipText("");
         jPhone.setBorder(null);
+        jPhone.setCaretColor(new java.awt.Color(255, 255, 255));
         jPhone.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jSeparator5.setBackground(new java.awt.Color(255, 255, 255));
@@ -161,6 +166,7 @@ public class Register extends javax.swing.JFrame {
         jPassword.setForeground(new java.awt.Color(255, 255, 255));
         jPassword.setText("password");
         jPassword.setBorder(null);
+        jPassword.setCaretColor(new java.awt.Color(255, 255, 255));
 
         jSeparator6.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
@@ -298,7 +304,8 @@ public class Register extends javax.swing.JFrame {
             .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(393, 556));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRegisterMouseClicked
