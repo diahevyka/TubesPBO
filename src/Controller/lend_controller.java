@@ -39,7 +39,6 @@ public class lend_controller extends MouseAdapter{
         Object O = e.getSource();
         if (O.equals(view.getBtnCancel())){
             view.setVisible(false);
-            new main_controller();
         } else if (O.equals(view.getBtnLend())){
             if (view.getTName().getText().equals("") || view.getTNoktp().getText().equals("") || view.getTEmail().getText().equals("") || view.getTAddress().getText().equals("") || view.getTPhone().getText().equals("")){
                 view.getError().setVisible(true);

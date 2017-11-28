@@ -738,7 +738,8 @@ public class Main extends javax.swing.JFrame {
             .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(800, 520));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     //Navigation

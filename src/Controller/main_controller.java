@@ -22,31 +22,37 @@ public class main_controller extends MouseAdapter {
     
     private Driver dr;
     private String sql;
-    private Connection con;
+    private Connection conn;
     private Statement stat;
     private ResultSet rs;
     private Main M;
+    private Employee em;
     
     
     
-    public main_controller() {
+    public main_controller(Account ac) {
         M = new Main();
         M.addMouseAdapter(this);
         Database db = new Database();
         
-        db.connect();
-        con = db.con;
+        conn = db.con;
         stat = db.stm;
         
-        //Configure Position of Window
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        M.setLocation(dim.width/2-M.getSize().width/2, dim.height/2-M.getSize().height/2);
+        try {
+            sql = "SELECT * FROM employee JOIN account USING (username) WHERE username = '"+ ac.getUserName()+"' ";
+            rs = stat.executeQuery(sql);
+            if (rs.next()){
+                em = new Employee(ac.getUserName(),ac.getPassword(),rs.getString("Name"),rs.getString("Email"),rs.getString("Address"),rs.getString("Phone"));
+                M.getFName().setText(em.getName());
+                M.getFEmail().setText(em.getEmail());
+                M.getFAddress().setText(em.getAddress());
+                M.getFPhone().setText(em.getPhone());
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         
         M.setVisible(true);
-    }
-    
-    public Main getMain(){
-        return M;
     }
     
     public void mousePressed(MouseEvent e){
@@ -88,8 +94,6 @@ public class main_controller extends MouseAdapter {
             M.getPrent().setVisible(false);
             M.getPlend().setVisible(false);
             M.getPdriver().setVisible(true);
-            
-            
         } else if (O.equals(M.getBtnExit())){
             System.exit(0);
         } else if (O.equals(M.getBtnEdit())){

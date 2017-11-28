@@ -25,10 +25,9 @@ public class login_controller extends MouseAdapter {
     private Loading Lo = new Loading();
     private Account ac;
     private String sql;
-    private Connection con;
+    private Connection conn;
     private Statement stat;
     private ResultSet rs;
-    private main_controller main;
     
     
     public login_controller(){
@@ -36,7 +35,7 @@ public class login_controller extends MouseAdapter {
         Database db = new Database();
         
         db.connect();
-        con = db.con;
+        conn = db.con;
         stat = db.stm;
         
         if (db.connect_status) {
@@ -70,7 +69,7 @@ public class login_controller extends MouseAdapter {
                 if(rs.next()){
                     if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
                         L.setVisible(false);
-                        new main_controller();
+                        new main_controller(ac);
                     }
                     else{
                         
