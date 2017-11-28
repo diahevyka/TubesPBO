@@ -11,18 +11,32 @@ package Controller;
  */
 
 import Model.*;
+import Model.Driver;
 import View.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.*;
+import java.sql.*;
 
 public class main_controller extends MouseAdapter {
     
+    private Driver dr;
+    private String sql;
+    private Connection con;
+    private Statement stat;
+    private ResultSet rs;
     private Main M;
+    
+    
     
     public main_controller() {
         M = new Main();
         M.addMouseAdapter(this);
+        Database db = new Database();
+        
+        db.connect();
+        con = db.con;
+        stat = db.stm;
         
         //Configure Position of Window
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
@@ -74,6 +88,8 @@ public class main_controller extends MouseAdapter {
             M.getPrent().setVisible(false);
             M.getPlend().setVisible(false);
             M.getPdriver().setVisible(true);
+            
+            
         } else if (O.equals(M.getBtnExit())){
             System.exit(0);
         } else if (O.equals(M.getBtnEdit())){
