@@ -121,7 +121,7 @@ public class Main extends javax.swing.JFrame {
         jExit.setText("   X ");
         bg.add(jExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, 40, 40));
 
-        Navigation.setBackground(new java.awt.Color(255, 255, 255));
+        Navigation.setBackground(new java.awt.Color(204, 204, 204));
         Navigation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cars.png"))); // NOI18N
@@ -133,11 +133,12 @@ public class Main extends javax.swing.JFrame {
         jLabel2.setText("Co-Cars");
         Navigation.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 133, -1, -1));
 
-        nAccount.setBackground(new java.awt.Color(204, 204, 204));
+        nAccount.setBackground(new java.awt.Color(255, 255, 255));
         nAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Account");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -166,12 +167,13 @@ public class Main extends javax.swing.JFrame {
 
         Navigation.add(nAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 193, 200, -1));
 
-        nRent.setBackground(new java.awt.Color(255, 255, 255));
+        nRent.setBackground(new java.awt.Color(204, 204, 204));
         nRent.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nRent.setPreferredSize(new java.awt.Dimension(124, 54));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("Rent");
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -203,12 +205,13 @@ public class Main extends javax.swing.JFrame {
 
         Navigation.add(nRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 200, 59));
 
-        nLend.setBackground(new java.awt.Color(255, 255, 255));
+        nLend.setBackground(new java.awt.Color(204, 204, 204));
         nLend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nLend.setPreferredSize(new java.awt.Dimension(124, 54));
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 51, 51));
         jLabel13.setText("Lend");
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -239,12 +242,13 @@ public class Main extends javax.swing.JFrame {
 
         Navigation.add(nLend, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 309, 200, 60));
 
-        nDriver.setBackground(new java.awt.Color(255, 255, 255));
+        nDriver.setBackground(new java.awt.Color(204, 204, 204));
         nDriver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         nDriver.setPreferredSize(new java.awt.Dimension(124, 54));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("Driver");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -264,7 +268,7 @@ public class Main extends javax.swing.JFrame {
         nDriverLayout.setVerticalGroup(
             nDriverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nDriverLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(17, Short.MAX_VALUE)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nDriverLayout.createSequentialGroup()
@@ -279,7 +283,7 @@ public class Main extends javax.swing.JFrame {
         jLabel10.setText("HAR - 2017");
         Navigation.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 500, -1, -1));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -322,6 +326,7 @@ public class Main extends javax.swing.JFrame {
         jName.setForeground(new java.awt.Color(255, 255, 255));
         jName.setText("Muhammad Hatta");
         jName.setBorder(null);
+        jName.setCaretColor(new java.awt.Color(255, 255, 255));
         jName.setSelectionColor(new java.awt.Color(0, 0, 0));
 
         jEmail.setBackground(new java.awt.Color(102, 102, 102));
@@ -329,6 +334,7 @@ public class Main extends javax.swing.JFrame {
         jEmail.setForeground(new java.awt.Color(255, 255, 255));
         jEmail.setText("hatta.eka.p@gmail.com");
         jEmail.setBorder(null);
+        jEmail.setCaretColor(new java.awt.Color(255, 255, 255));
         jEmail.setSelectionColor(new java.awt.Color(0, 0, 0));
 
         jAddress.setBackground(new java.awt.Color(102, 102, 102));
@@ -336,6 +342,7 @@ public class Main extends javax.swing.JFrame {
         jAddress.setForeground(new java.awt.Color(255, 255, 255));
         jAddress.setText("Wisma Annafi");
         jAddress.setBorder(null);
+        jAddress.setCaretColor(new java.awt.Color(255, 255, 255));
         jAddress.setSelectionColor(new java.awt.Color(0, 0, 0));
 
         jPhone.setBackground(new java.awt.Color(102, 102, 102));
@@ -343,7 +350,7 @@ public class Main extends javax.swing.JFrame {
         jPhone.setForeground(new java.awt.Color(255, 255, 255));
         jPhone.setText("081221447275");
         jPhone.setBorder(null);
-        jPhone.setCaretColor(new java.awt.Color(51, 51, 51));
+        jPhone.setCaretColor(new java.awt.Color(255, 255, 255));
         jPhone.setSelectionColor(new java.awt.Color(0, 0, 0));
 
         jSeparator1.setBackground(new java.awt.Color(51, 51, 51));
@@ -363,6 +370,7 @@ public class Main extends javax.swing.JFrame {
         jEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 51, 51));
         jLabel20.setText("EDIT DATA");
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-edit-filled (2).png"))); // NOI18N
@@ -392,6 +400,7 @@ public class Main extends javax.swing.JFrame {
         jSave.setPreferredSize(new java.awt.Dimension(85, 42));
 
         jLabel21.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(51, 51, 51));
         jLabel21.setText("SAVE");
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-save-filled.png"))); // NOI18N
@@ -734,11 +743,11 @@ public class Main extends javax.swing.JFrame {
 
     //Navigation
     public void setColor(JPanel panel){
-        panel.setBackground(new Color(204,204,204));
+        panel.setBackground(new Color(255,255,255));
     }
     
     public void resetColor(JPanel panel){
-        panel.setBackground(new Color(255,255,255));
+        panel.setBackground(new Color(204,204,204));
     }
     
     public JPanel getBtnaccount(){
@@ -784,6 +793,7 @@ public class Main extends javax.swing.JFrame {
         nDriver.addMouseListener(e);
         jExit.addMouseListener(e);
         jEdit.addMouseListener(e);
+        jSave.addMouseListener(e);
         newLend.addMouseListener(e);
         
     }
@@ -817,6 +827,15 @@ public class Main extends javax.swing.JFrame {
     public JPanel getBtnSave(){
         return jSave;
     }
+    
+    public void savee(){
+        jName.setEditable(false);
+        jEmail.setEditable(false);
+        jAddress.setEditable(false);
+        jPhone.setEditable(false);
+        jSave.setVisible(false);
+    }
+    
     //End Panel Account
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

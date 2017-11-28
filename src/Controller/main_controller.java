@@ -85,6 +85,9 @@ public class main_controller extends MouseAdapter {
         } else if (O.equals(M.getBtnnewLend())){
             M.setVisible(false);
             new lend_controller();
+        } else if (O.equals(M.getBtnSave())){
+            M.savee();
+            M.getBtnSave().setVisible(false);
         }
     }
     
