@@ -10,6 +10,7 @@ package Model;
  *
  * @author Windows 8.1
  */
+
 public class Account {
     private String userName;
     private String password;
