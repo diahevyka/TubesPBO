@@ -21,6 +21,15 @@ public class Driver {
         
     }
 
+    public Driver(String idDriver, String name, String SIMnum, int rentPrice, boolean status) {
+        this.idDriver = idDriver;
+        this.name = name;
+        this.SIMnum = SIMnum;
+        this.rentPrice = rentPrice;
+        this.status = status;
+    }
+
+    
     public String getIdDriver() {
         return idDriver;
     }
