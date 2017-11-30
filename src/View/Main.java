@@ -947,7 +947,10 @@ public class Main extends javax.swing.JFrame {
     public JPanel getViewDriver(){
         return btnView;
     }
-
+    
+    public JTable getTable(){
+        return tblDriver;
+    }
     
     public void savee(){
         jName.setEditable(false);

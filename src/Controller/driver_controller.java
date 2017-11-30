@@ -31,6 +31,7 @@ public class driver_controller extends MouseAdapter{
     private Connection con;
     private Statement stat;
     private ResultSet rs;
+    private Account ac;
     
         
     public driver_controller(){
@@ -56,7 +57,7 @@ public class driver_controller extends MouseAdapter{
         Object O = e.getSource();
         if (O.equals(view.getCancleDriver())){
             view.setVisible(false);
-            new main_controller();
+            new main_controller(ac);
         }
         else if (O.equals(view.getAddDriver())){
             try{

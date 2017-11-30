@@ -53,9 +53,6 @@ public class Driver extends javax.swing.JPanel {
         return btnAdd;
     }
     
-    public JTable getTable(){
-        return tblDriver;
-    }
     
     public void addMouseAdapter(MouseAdapter e) {
         btnAdd.addMouseListener(e);
