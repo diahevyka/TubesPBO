@@ -55,5 +55,13 @@ public class Cars implements Price{
     public void setPrice(double price) {
         
     }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public void setMerk(Merk merk) {
+        this.merk = merk;
+    }
     
 }

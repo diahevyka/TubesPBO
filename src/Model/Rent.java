@@ -22,6 +22,26 @@ public class Rent implements Price{
     private Driver driver;
     private double price;
 
+    public void setBorrowDate(Date borrowDate) {
+        this.borrowDate = borrowDate;
+    }
+
+    public void setReturnDate(Date returnDate) {
+        this.returnDate = returnDate;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public void setCar(Cars car) {
+        this.car = car;
+    }
+
     public Rent(String idTransaction, Date borrowDate, Date returnDate, Customer customer, Employee employee, Cars car, Driver driver) {
         this.idTransaction = idTransaction;
         this.borrowDate = borrowDate;

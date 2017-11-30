@@ -20,6 +20,10 @@ public class Owner extends User{
         
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getIdOwner() {
         return idOwner;
     }

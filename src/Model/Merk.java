@@ -19,6 +19,14 @@ public class Merk {
         this.name = name;
     }
 
+    public void setIdMerk(String idMerk) {
+        this.idMerk = idMerk;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getIdMerk() {
         return idMerk;
     }
