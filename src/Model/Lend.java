@@ -18,6 +18,12 @@ public class Lend implements Price {
     private Owner owner;
     private Cars car;
     private double price;
+    
+    public Lend(String lendDate, Owner owner, Cars car) {
+        this.lendDate = lendDate;
+        this.owner = owner;
+        this.car = car;
+    }
 
     public void setLendDate(String lendDate) {
         this.lendDate = lendDate;
@@ -36,12 +42,6 @@ public class Lend implements Price {
     }
 
     public void setCar(Cars car) {
-        this.car = car;
-    }
-
-    public Lend(String lendDate, Owner owner, Cars car) {
-        this.lendDate = lendDate;
-        this.owner = owner;
         this.car = car;
     }
 

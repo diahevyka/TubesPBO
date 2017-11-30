@@ -21,6 +21,17 @@ public class Rent implements Price{
     private Cars car;
     private Driver driver;
     private double price;
+    
+    
+     public Rent(String idTransaction, Date borrowDate, Date returnDate, Customer customer, Employee employee, Cars car, Driver driver) {
+        this.idTransaction = idTransaction;
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
+        this.customer = customer;
+        this.employee = employee;
+        this.car = car;
+        this.driver = driver;
+    }
 
     public void setBorrowDate(Date borrowDate) {
         this.borrowDate = borrowDate;
@@ -40,16 +51,6 @@ public class Rent implements Price{
 
     public void setCar(Cars car) {
         this.car = car;
-    }
-
-    public Rent(String idTransaction, Date borrowDate, Date returnDate, Customer customer, Employee employee, Cars car, Driver driver) {
-        this.idTransaction = idTransaction;
-        this.borrowDate = borrowDate;
-        this.returnDate = returnDate;
-        this.customer = customer;
-        this.employee = employee;
-        this.car = car;
-        this.driver = driver;
     }
 
     public void setIdTransaction(String idTransaction) {

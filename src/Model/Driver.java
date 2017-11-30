@@ -10,33 +10,20 @@ package Model;
  *
  * @author Windows 8.1
  */
-public class Driver {
-    private String idDriver;
+public class Driver {  
     private String name;
     private String SIMnum;
     private int rentPrice;
     private boolean status;
 
-    public Driver() {
-        
-    }
 
-    public Driver(String idDriver, String name, String SIMnum, int rentPrice, boolean status) {
-        this.idDriver = idDriver;
+    public Driver(String name, String SIMnum, int rentPrice, boolean status) {
         this.name = name;
         this.SIMnum = SIMnum;
         this.rentPrice = rentPrice;
         this.status = status;
     }
-
     
-    public String getIdDriver() {
-        return idDriver;
-    }
-
-    public void setIdDriver(String idDriver) {
-        this.idDriver = idDriver;
-    }
 
     public String getName() {
         return name;
