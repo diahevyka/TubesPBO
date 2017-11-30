@@ -36,7 +36,6 @@ public class Main extends javax.swing.JFrame {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jTextField2 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         bg = new javax.swing.JPanel();
@@ -92,6 +91,14 @@ public class Main extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         pDriver = new javax.swing.JPanel();
+        btnEdit = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        btnDelete = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tblDriver = new javax.swing.JTable();
+        btnView = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -105,8 +112,6 @@ public class Main extends javax.swing.JFrame {
         );
 
         jTextField2.setText("jTextField2");
-
-        jRadioButton1.setText("jRadioButton1");
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
@@ -414,7 +419,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         jSaveLayout.setVerticalGroup(
             jSaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -714,15 +719,116 @@ public class Main extends javax.swing.JFrame {
         pDriver.setBackground(new java.awt.Color(102, 102, 102));
         pDriver.setPreferredSize(new java.awt.Dimension(604, 460));
 
+        btnEdit.setBackground(new java.awt.Color(0, 153, 204));
+        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
+        btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel15.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("EDIT");
+
+        javax.swing.GroupLayout btnEditLayout = new javax.swing.GroupLayout(btnEdit);
+        btnEdit.setLayout(btnEditLayout);
+        btnEditLayout.setHorizontalGroup(
+            btnEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEditLayout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addComponent(jLabel15)
+                .addGap(21, 21, 21))
+        );
+        btnEditLayout.setVerticalGroup(
+            btnEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+        );
+
+        btnDelete.setBackground(new java.awt.Color(0, 153, 204));
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
+        btnDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel27.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel27.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("DELETE");
+
+        javax.swing.GroupLayout btnDeleteLayout = new javax.swing.GroupLayout(btnDelete);
+        btnDelete.setLayout(btnDeleteLayout);
+        btnDeleteLayout.setHorizontalGroup(
+            btnDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnDeleteLayout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jLabel27)
+                .addGap(20, 20, 20))
+        );
+        btnDeleteLayout.setVerticalGroup(
+            btnDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        tblDriver.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(tblDriver);
+
+        btnView.setBackground(new java.awt.Color(0, 153, 204));
+        btnView.setForeground(new java.awt.Color(255, 255, 255));
+        btnView.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel28.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel28.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("VIEW");
+
+        javax.swing.GroupLayout btnViewLayout = new javax.swing.GroupLayout(btnView);
+        btnView.setLayout(btnViewLayout);
+        btnViewLayout.setHorizontalGroup(
+            btnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnViewLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jLabel28)
+                .addGap(23, 23, 23))
+        );
+        btnViewLayout.setVerticalGroup(
+            btnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout pDriverLayout = new javax.swing.GroupLayout(pDriver);
         pDriver.setLayout(pDriverLayout);
         pDriverLayout.setHorizontalGroup(
             pDriverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pDriverLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
+                .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
+            .addGroup(pDriverLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         pDriverLayout.setVerticalGroup(
             pDriverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+            .addGroup(pDriverLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(pDriverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnView, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         bg.add(pDriver, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 600, 460));
@@ -796,7 +902,8 @@ public class Main extends javax.swing.JFrame {
         jEdit.addMouseListener(e);
         jSave.addMouseListener(e);
         newLend.addMouseListener(e);
-        
+        btnEdit.addMouseListener(e);
+        btnDelete.addMouseListener(e);
     }
     
     public JLabel getBtnExit(){
@@ -829,6 +936,19 @@ public class Main extends javax.swing.JFrame {
         return jSave;
     }
     
+    public JPanel getEditDriver(){
+        return btnEdit;
+    }
+    
+    public JPanel getDeleteDriver(){
+        return btnDelete;
+    }
+    
+    public JPanel getViewDriver(){
+        return btnView;
+    }
+
+    
     public void savee(){
         jName.setEditable(false);
         jEmail.setEditable(false);
@@ -843,6 +963,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel Navigation;
     private javax.swing.JPanel bNew;
     private javax.swing.JPanel bg;
+    private javax.swing.JPanel btnDelete;
+    private javax.swing.JPanel btnEdit;
+    private javax.swing.JPanel btnView;
     private javax.swing.JTextField jAddress;
     private javax.swing.JPanel jEdit;
     private javax.swing.JTextField jEmail;
@@ -854,6 +977,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -866,6 +990,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
@@ -876,11 +1002,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField jName;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField jPhone;
-    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JPanel jSave;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -898,6 +1024,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel pRent;
     private javax.swing.JTable tLend;
     private javax.swing.JTable tRent;
+    private javax.swing.JTable tblDriver;
     // End of variables declaration//GEN-END:variables
     
 }

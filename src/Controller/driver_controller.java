@@ -31,7 +31,6 @@ public class driver_controller extends MouseAdapter{
     private Connection con;
     private Statement stat;
     private ResultSet rs;
-    private DefaultTableModel model;
     
         
     public driver_controller(){
@@ -70,48 +69,6 @@ public class driver_controller extends MouseAdapter{
                 sql = "INSERT INTO driver " + " VALUES ('"+ IdDriver +"','"+ name +"','"+SIMNum+"','"+RentPrice+"','"+status+"')";
                 stat = con.createStatement();
                 stat.executeQuery(sql);
-            }catch(Exception ex){
-                System.out.println(ex);
-            }
-        }
-        else if (O.equals(view.getDeleteDriver())){
-            try{
-                
-            }catch(Exception ex){
-                System.out.println(ex);
-            }
-        }
-        else if (O.equals(view.getEditDriver())){
-            try{
-//                sql = "update Driver set "
-            }catch(Exception ex){
-                System.out.println(ex);
-            }
-        }
-        else if (O.equals(view.getView())){
-            try{
-                model = new DefaultTableModel();
-                view.getTable().setModel(model);
-
-                sql = "Select * from Driver";
-                rs = stat.executeQuery(sql);
-                while(rs.next()){
-                    Object[] ob = new Object[5];
-                    ob[0] = rs.getString("idDriver");
-                    ob[1] = rs.getString("Name");
-                    ob[2] = rs.getString("SIMNum");
-                    ob[3] = rs.getString("rentPrice");
-                    ob[4] = rs.getString("status");
-                    
-                    model.addRow(ob);
-                }
-                
-                model.addColumn("ID Driver");
-                model.addColumn("Nama Driver");
-                model.addColumn("No SIM");
-                model.addColumn("Harga Sewa");
-                model.addColumn("Status");
-                
             }catch(Exception ex){
                 System.out.println(ex);
             }

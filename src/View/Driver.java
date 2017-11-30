@@ -53,26 +53,12 @@ public class Driver extends javax.swing.JPanel {
         return btnAdd;
     }
     
-    public JPanel getEditDriver(){
-        return btnEdit;
-    }
-    
-    public JPanel getDeleteDriver(){
-        return btnDelete;
-    }
-    
-    public JPanel getView(){
-        return btnView;
-    }
-    
     public JTable getTable(){
         return tblDriver;
     }
     
     public void addMouseAdapter(MouseAdapter e) {
         btnAdd.addMouseListener(e);
-        btnEdit.addMouseListener(e);
-        btnDelete.addMouseListener(e);
         didDriver.addMouseListener(e);
         dnama.addMouseListener(e);
         dnosim.addMouseListener(e);
@@ -103,16 +89,10 @@ public class Driver extends javax.swing.JPanel {
         dstatus = new javax.swing.JTextField();
         btnAdd = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        btnEdit = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        btnDelete = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
         btnCancle = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblDriver = new javax.swing.JTable();
-        btnView = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -197,52 +177,6 @@ public class Driver extends javax.swing.JPanel {
             .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
         );
 
-        btnEdit.setBackground(new java.awt.Color(0, 153, 204));
-        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
-        btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jLabel14.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("EDIT");
-
-        javax.swing.GroupLayout btnEditLayout = new javax.swing.GroupLayout(btnEdit);
-        btnEdit.setLayout(btnEditLayout);
-        btnEditLayout.setHorizontalGroup(
-            btnEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnEditLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel14)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        btnEditLayout.setVerticalGroup(
-            btnEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-        );
-
-        btnDelete.setBackground(new java.awt.Color(0, 153, 204));
-        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
-        btnDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jLabel15.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("DELETE");
-
-        javax.swing.GroupLayout btnDeleteLayout = new javax.swing.GroupLayout(btnDelete);
-        btnDelete.setLayout(btnDeleteLayout);
-        btnDeleteLayout.setHorizontalGroup(
-            btnDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnDeleteLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel15)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        btnDeleteLayout.setVerticalGroup(
-            btnDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-        );
-
         btnCancle.setBackground(new java.awt.Color(0, 153, 204));
         btnCancle.setForeground(new java.awt.Color(255, 255, 255));
         btnCancle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -279,29 +213,6 @@ public class Driver extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(tblDriver);
 
-        btnView.setBackground(new java.awt.Color(0, 153, 204));
-        btnView.setForeground(new java.awt.Color(255, 255, 255));
-        btnView.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jLabel17.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel17.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("VIEW");
-
-        javax.swing.GroupLayout btnViewLayout = new javax.swing.GroupLayout(btnView);
-        btnView.setLayout(btnViewLayout);
-        btnViewLayout.setHorizontalGroup(
-            btnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnViewLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel17)
-                .addGap(24, 24, 24))
-        );
-        btnViewLayout.setVerticalGroup(
-            btnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -329,9 +240,6 @@ public class Driver extends javax.swing.JPanel {
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnView, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDelete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnCancle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -348,16 +256,11 @@ public class Driver extends javax.swing.JPanel {
                             .addComponent(didDriver, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)))
                     .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(dnama, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(13, 13, 13))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dnama, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -371,12 +274,7 @@ public class Driver extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(dstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCancle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnCancle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -387,9 +285,6 @@ public class Driver extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnAdd;
     private javax.swing.JPanel btnCancle;
-    private javax.swing.JPanel btnDelete;
-    private javax.swing.JPanel btnEdit;
-    private javax.swing.JPanel btnView;
     private javax.swing.JTextField didDriver;
     private javax.swing.JTextField dnama;
     private javax.swing.JTextField dnosim;
@@ -397,10 +292,7 @@ public class Driver extends javax.swing.JPanel {
     private javax.swing.JTextField dstatus;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

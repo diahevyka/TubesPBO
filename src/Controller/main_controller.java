@@ -17,6 +17,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.*;
 import java.sql.*;
+import javax.swing.table.DefaultTableModel;
 
 public class main_controller extends MouseAdapter {
     
@@ -27,6 +28,7 @@ public class main_controller extends MouseAdapter {
     private ResultSet rs;
     private Main M;
     private Employee em;
+    private DefaultTableModel model;
     
     
     
@@ -108,6 +110,49 @@ public class main_controller extends MouseAdapter {
         } else if (O.equals(M.getBtnSave())){
             M.savee();
             M.getBtnSave().setVisible(false);
+        }
+        else if (O.equals(M.getDeleteDriver())){
+            try{
+                
+            }catch(Exception ex){
+                System.out.println(ex);
+            }
+        }
+        else if (O.equals(M.getEditDriver())){
+            try{
+//                sql = "update Driver set "
+            }catch(Exception ex){
+                System.out.println(ex);
+            }
+        }
+        
+        else if (O.equals(M.getViewDriver())){
+            try{
+                model = new DefaultTableModel();
+                M.getTable().setModel(model);
+
+                sql = "Select * from Driver";
+                rs = stat.executeQuery(sql);
+                while(rs.next()){
+                    Object[] ob = new Object[5];
+                    ob[0] = rs.getString("idDriver");
+                    ob[1] = rs.getString("Name");
+                    ob[2] = rs.getString("SIMNum");
+                    ob[3] = rs.getString("rentPrice");
+                    ob[4] = rs.getString("status");
+                    
+                    model.addRow(ob);
+                }
+                
+                model.addColumn("ID Driver");
+                model.addColumn("Nama Driver");
+                model.addColumn("No SIM");
+                model.addColumn("Harga Sewa");
+                model.addColumn("Status");
+                
+            }catch(Exception ex){
+                System.out.println(ex);
+            }
         }
     }
     
