@@ -15,7 +15,7 @@ public class Cars implements Price{
     private boolean status;
     private Type type;
     private Merk merk;
-
+    
     public Cars(String idCar, double rentPrice, Type type, Merk merk) {
         this.idCar = idCar;
         
