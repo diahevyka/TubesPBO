@@ -14,10 +14,9 @@ public class Owner extends User{
     private String idOwner;
     private String email;
 
-    public Owner(String idOwner, String name, String email, String address, String phone) {
-        
-        super(name, address, phone);
-        
+    public Owner(String idOwner, String name, String email, String address, String phone) {  
+        super(name, address, phone);   
+        this.email = email;
     }
 
     public void setEmail(String email) {

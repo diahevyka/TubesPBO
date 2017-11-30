@@ -15,12 +15,13 @@ public class Cars implements Price{
     private boolean status;
     private Type type;
     private Merk merk;
+    private double rentPrice;
 
     public Cars(String idCar, double rentPrice, Type type, Merk merk) {
         this.idCar = idCar;
-        
         this.type = type;
         this.merk = merk;
+        this.rentPrice= rentPrice;
     }
 
     public void setIdCar(String idCar) {
