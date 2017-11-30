@@ -110,6 +110,9 @@ public class main_controller extends MouseAdapter {
         } else if (O.equals(M.getBtnSave())){
             M.savee();
             M.getBtnSave().setVisible(false);
+        } else if (O.equals(M.getBtnnewDriver())){
+            M.setVisible(false);
+            new driver_controller();
         }
         else if (O.equals(M.getDeleteDriver())){
             try{

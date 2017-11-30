@@ -36,6 +36,9 @@ public class driver_controller extends MouseAdapter{
         
     public driver_controller(){
         Database db = new Database();
+        view = new Driver();
+        view.addMouseAdapter(this);
+        view.setVisible(true);
         
         db.connect();
         con = db.con;
@@ -47,10 +50,7 @@ public class driver_controller extends MouseAdapter{
             D.setVisible(true);
         } else {
             new ErrorMassage().setVisible(true);
-        }
-        
-        view.addMouseAdapter(this);
-        view.setVisible(true);
+        }     
     }
     
     public void mousePressed(MouseEvent e){
