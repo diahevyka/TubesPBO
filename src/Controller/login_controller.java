@@ -17,6 +17,8 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.*;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Timer;
 
 public class login_controller extends MouseAdapter implements FocusListener{
@@ -29,9 +31,7 @@ public class login_controller extends MouseAdapter implements FocusListener{
     private Statement stat;
     private ResultSet rs;
     
-    
     public login_controller(){
-        
         Database db = new Database();
         
         db.connect();
@@ -46,8 +46,6 @@ public class login_controller extends MouseAdapter implements FocusListener{
         } else {
             new ErrorMassage().setVisible(true);
         }
-        
-       
     }
     
     public void mousePressed(MouseEvent e){
