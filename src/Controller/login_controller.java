@@ -31,9 +31,7 @@ public class login_controller extends MouseAdapter implements FocusListener{
     private Statement stat;
     private ResultSet rs;
     
-    
     public login_controller(){
-        
         Database db = new Database();
         
         db.connect();
@@ -48,8 +46,6 @@ public class login_controller extends MouseAdapter implements FocusListener{
         } else {
             new ErrorMassage().setVisible(true);
         }
-        
-       
     }
     
     public void mousePressed(MouseEvent e){

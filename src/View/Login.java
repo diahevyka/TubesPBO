@@ -92,7 +92,8 @@ public class Login extends javax.swing.JFrame {
         jUsername.setBorder(null);
         jUsername.setCaretColor(new java.awt.Color(255, 255, 255));
         jUsername.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jUsername.setSelectionColor(new java.awt.Color(51, 51, 51));
+        jUsername.setSelectedTextColor(new java.awt.Color(51, 51, 51));
+        jUsername.setSelectionColor(new java.awt.Color(204, 204, 204));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
@@ -116,7 +117,7 @@ public class Login extends javax.swing.JFrame {
         jLoginLayout.setHorizontalGroup(
             jLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLoginLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
+                .addGap(104, 104, 104)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -140,9 +141,9 @@ public class Login extends javax.swing.JFrame {
         jRegisterLayout.setHorizontalGroup(
             jRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jRegisterLayout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addGap(91, 91, 91)
                 .addComponent(jLabel6)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         jRegisterLayout.setVerticalGroup(
             jRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,7 +159,8 @@ public class Login extends javax.swing.JFrame {
         jPassword.setText("password");
         jPassword.setBorder(null);
         jPassword.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPassword.setSelectionColor(new java.awt.Color(51, 51, 51));
+        jPassword.setSelectedTextColor(new java.awt.Color(51, 51, 51));
+        jPassword.setSelectionColor(new java.awt.Color(204, 204, 204));
 
         jRadioButton1.setText("jRadioButton1");
 
@@ -188,7 +190,7 @@ public class Login extends javax.swing.JFrame {
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 16, Short.MAX_VALUE)
                 .addComponent(ErrorMassage))
         );
 
@@ -199,31 +201,34 @@ public class Login extends javax.swing.JFrame {
             .addGroup(loginLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
-                        .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGap(46, 46, 46)
+                        .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(65, 65, 65))
-                    .addComponent(jExit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(loginLayout.createSequentialGroup()
-                                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(22, 22, 22))
-                            .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
-                                .addComponent(jSeparator1)
-                                .addComponent(jSeparator2)
-                                .addComponent(jPassword)))
-                        .addGap(41, 41, 41))))
+                        .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
+                            .addComponent(jSeparator1)
+                            .addComponent(jSeparator2)
+                            .addComponent(jPassword))
+                        .addGap(41, 41, 41))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
+                        .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(63, 63, 63))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         loginLayout.setVerticalGroup(
             loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

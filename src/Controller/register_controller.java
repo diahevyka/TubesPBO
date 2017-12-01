@@ -42,7 +42,6 @@ public class register_controller extends MouseAdapter implements FocusListener {
         Object O = e.getSource();
         if (O.equals(R.BtnRegister())){
             try {
-                statement = conn.createStatement();
                 if (R.getTUsername().getText().equals("") || R.getTName().getText().equals("") || R.getTEmail().getText().equals("") || R.getTAddress().getText().equals("") || R.getTPhone().getText().equals("") || R.getTPassword().getText().equals("") || R.getTUsername().getText().equals("username") || R.getTName().getText().equals("name") || R.getTEmail().getText().equals("email") || R.getTAddress().getText().equals("address") || R.getTPhone().getText().equals("phone") || R.getTPassword().getText().equals("password")){
                     R.getErrorMassage().setText("      Please fill all field");
                     R.getErrorMassage().setVisible(true);
