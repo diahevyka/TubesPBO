@@ -85,7 +85,9 @@ public class register_controller extends MouseAdapter implements FocusListener {
                 R.getTEmail().setText("");
             }
         } else if (O.equals(R.getTAddress())){
-            if (R.getTAddress().getText())
+            if (R.getTAddress().getText().equals("address")){
+                R.getTAddress().setText("");
+            }
         }
     }
 
