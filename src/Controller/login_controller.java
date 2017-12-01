@@ -19,7 +19,7 @@ import java.awt.event.*;
 import java.sql.*;
 import javax.swing.Timer;
 
-public class login_controller extends MouseAdapter {
+public class login_controller extends MouseAdapter implements FocusListener{
     
     private Login L;
     private Loading Lo = new Loading();
@@ -40,8 +40,8 @@ public class login_controller extends MouseAdapter {
         
         if (db.connect_status) {
             L = new Login();
-            ac = new Account();
             L.addMouseAdapter(this);
+            L.addFocusListener(this);
             L.setVisible(true);
         } else {
             new ErrorMassage().setVisible(true);
@@ -61,8 +61,7 @@ public class login_controller extends MouseAdapter {
         } else if (O.equals(L.getTExit())){
             System.exit(0);
         } else if (O.equals(L.BtnLogin())){
-            ac.setUserName(L.getTUsername().getText());
-            ac.setPassword(L.getTPassword().getText());
+            ac = new Account(L.getTUsername().getText(),L.getTPassword().getText());
             try{
                 sql = "Select * from account where UserName='"+ac.getUserName()+"' And password='"+ac.getPassword()+"'";
                 rs = stat.executeQuery(sql);
@@ -85,7 +84,23 @@ public class login_controller extends MouseAdapter {
             new register_controller();
         }
     }
-    
-    
-    
+
+    @Override
+    public void focusGained(FocusEvent e) {
+        Object O = e.getSource();
+        if (O.equals(L.getTUsername())){
+            if (L.getTUsername().getText().equals("username")){
+                L.getTUsername().setText("");
+            }
+        } else if (O.equals(L.getTPassword())){
+            if (L.getTPassword().getText().equals("password")){
+                L.getTPassword().setText("");
+            }
+        }
+    }
+
+    @Override
+    public void focusLost(FocusEvent e) {
+        
+    }
 }

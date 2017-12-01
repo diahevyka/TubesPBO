@@ -13,18 +13,14 @@ import java.awt.event.MouseAdapter;
  */
 
 import View.*;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
-import java.sql.ResultSet;
 import Model.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-public class register_controller extends MouseAdapter {
+public class register_controller extends MouseAdapter implements FocusListener {
     private Register R;
     private Database db = new Database();
     private String sql;
@@ -35,6 +31,7 @@ public class register_controller extends MouseAdapter {
     public register_controller(){
         R = new Register();
         R.addMouseAdapter(this);
+        R.addFocusListener(this);
         R.setVisible(true);
     }
     
@@ -70,5 +67,30 @@ public class register_controller extends MouseAdapter {
         } else if(O.equals(R.BtnExit())){
             System.exit(0);
         }
+    }
+
+    @Override
+    public void focusGained(FocusEvent e) {
+        Object O = e.getSource();
+        if (O.equals(R.getTUsername())){
+            if (R.getTUsername().getText().equals("username")){
+                R.getTUsername().setText("");
+            }
+        } else if (O.equals(R.getTPassword())) {
+            if (R.getTPassword().getText().equals("password")){
+                R.getTPassword().setText("");
+            }
+        } else if (O.equals(R.getTEmail())){
+            if (R.getTEmail().getText().equals("email")){
+                R.getTEmail().setText("");
+            }
+        } else if (O.equals(R.getTAddress())){
+            if (R.getTAddress().getText())
+        }
+    }
+
+    @Override
+    public void focusLost(FocusEvent e) {
+        
     }
 }

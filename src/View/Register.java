@@ -5,6 +5,7 @@
  */
 package View;
 
+import java.awt.event.FocusListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.*;
 
@@ -353,6 +354,15 @@ public class Register extends javax.swing.JFrame {
         jPhone.addMouseListener(e);
         jPassword.addMouseListener(e);
         jExit.addMouseListener(e);
+    }
+    
+    public void addFocusListener(FocusListener e){
+        jUsername.addFocusListener(e);
+        jPassword.addFocusListener(e);
+        jName.addFocusListener(e);
+        jEmail.addFocusListener(e);
+        jAddress.addFocusListener(e);
+        jPhone.addFocusListener(e);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

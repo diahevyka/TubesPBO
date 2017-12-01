@@ -10,6 +10,7 @@ package View;
  * @author Atta
  */
 
+import java.awt.event.FocusListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.*;
 
@@ -298,6 +299,11 @@ public class Login extends javax.swing.JFrame {
     
     public JPanel getLoader(){
         return loader;
+    }
+    
+    public void addFocusListener(FocusListener e){
+        jUsername.addFocusListener(e);
+        jPassword.addFocusListener(e);
     }
     
     public void addMouseAdapter(MouseAdapter e){

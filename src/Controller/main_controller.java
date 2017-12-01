@@ -13,8 +13,6 @@ package Controller;
 import Model.*;
 import Model.Driver;
 import View.*;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.awt.event.*;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
@@ -29,8 +27,6 @@ public class main_controller extends MouseAdapter {
     private Main M;
     private Employee em;
     private DefaultTableModel model;
-    
-    
     
     public main_controller(Account ac) {
         M = new Main();
@@ -53,13 +49,11 @@ public class main_controller extends MouseAdapter {
         } catch (Exception e) {
             System.out.println(e);
         }
-        
         M.setVisible(true);
     }
     
     public void mousePressed(MouseEvent e){
         Object O = e.getSource();
-        
         if (O.equals(M.getBtnaccount())){
             M.setColor(M.getBtnaccount());
             M.resetColor(M.getBtnrent());

@@ -422,7 +422,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jSaveLayout.setVerticalGroup(
             jSaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -842,7 +842,9 @@ public class Main extends javax.swing.JFrame {
             .addGroup(pDriverLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(pDriverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pDriverLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pDriverLayout.createSequentialGroup()
                         .addComponent(newDriver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
@@ -851,7 +853,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
                         .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         pDriverLayout.setVerticalGroup(
             pDriverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
