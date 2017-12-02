@@ -19,7 +19,6 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 public class register_controller extends MouseAdapter implements FocusListener {
@@ -107,11 +106,25 @@ public class register_controller extends MouseAdapter implements FocusListener {
                 R.getTEmail().setText("");
             }
         } else if (O.equals(R.getTAddress())){
-            if (R.getTAddress().getText())
+            R.getErrorMassage().setVisible(false);
+            if (R.getTAddress().getText().equals("address")){
+                R.getTAddress().setText("");
+            }
+        } else if (O.equals(R.getTPhone())){
+            R.getErrorMassage().setVisible(false);
+            if (R.getTPhone().getText().equals("phone")){
+                R.getTPhone().setText("");
+            }
+        } else if (O.equals(R.getTName())){
+            R.getErrorMassage().setVisible(false);
+            if (R.getTName().getText().equals("name")){
+                R.getTName().setText("");
+            }
         }
     }
 
     @Override
     public void focusLost(FocusEvent e) {
+        
     }
 }
