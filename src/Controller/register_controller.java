@@ -107,25 +107,7 @@ public class register_controller extends MouseAdapter implements FocusListener {
                 R.getTEmail().setText("");
             }
         } else if (O.equals(R.getTAddress())){
-            R.getErrorMassage().setVisible(false);
-            if (R.getTAddress().getText().equals("address")){
-                R.getTAddress().setText("");
-            }
-        } else if (O.equals(R.getTPhone())){
-            R.getErrorMassage().setVisible(false);
-            if (R.getTPhone().getText().equals("phone")){
-                R.getTPhone().setText("");
-            }
-        } else if (O.equals(R.getTPassword())){
-            R.getErrorMassage().setVisible(false);
-            if (R.getTPassword().getText().equals("password")){
-                R.getTPassword().setText("");
-            }
-        } else if (O.equals(R.getTName())){
-            R.getErrorMassage().setVisible(false);
-            if (R.getTName().getText().equals("password")){
-                R.getTName().setText("");
-            }
+            if (R.getTAddress().getText())
         }
     }
 

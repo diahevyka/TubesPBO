@@ -8,9 +8,9 @@ package Controller;
 
 import Model.Account;
 import Model.Database;
-import View.Driver;
 import View.ErrorMassage;
 import View.Login;
+import View.New_Driver;
 import View.New_Lend;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -24,9 +24,8 @@ import javax.swing.table.DefaultTableModel;
  * @author Windows 8.1
  */
 public class driver_controller extends MouseAdapter{
-    private Driver D;
-    private Driver driver;
-    private Driver view;
+    private New_Driver driver;
+    private New_Driver view;
     private String sql;
     private Connection con;
     private Statement stat;
@@ -35,38 +34,26 @@ public class driver_controller extends MouseAdapter{
     
         
     public driver_controller(){
-        Database db = new Database();
-        view = new Driver();
+        view = new New_Driver();
         view.addMouseAdapter(this);
         view.setVisible(true);
-        
-        db.connect();
-        con = db.con;
-        stat = db.stm;
-        
-        if (db.connect_status) {
-            D = new Driver();
-            D.addMouseAdapter(this);
-            D.setVisible(true);
-        } else {
-            new ErrorMassage().setVisible(true);
-        }     
+           
     }
     
     public void mousePressed(MouseEvent e){
         Object O = e.getSource();
-        if (O.equals(view.getCancleDriver())){
+        if (O.equals(view.getBtnCancel())){
             view.setVisible(false);
             new main_controller(ac);
         }
-        else if (O.equals(view.getAddDriver())){
+        else if (O.equals(view.getDAdd())){
             try{
-                driver = new Driver();
-                String IdDriver = driver.getDIdDriver().getText();
-                String name = driver.getDNamaDriver().getText();
-                String SIMNum = driver.getDSimNum().getText();
-                String RentPrice = driver.getDStatusDriver().getText();
-                String status = driver.getDStatusDriver().getText();
+                driver = new New_Driver();
+                String IdDriver = driver.getDidDriver().getText();
+                String name = driver.getDNama().getText();
+                String SIMNum = driver.getDNoSIM().getText();
+                String RentPrice = driver.getDHarga().getText();
+                String status = driver.getDStatus().getText();
                 sql = "INSERT INTO driver " + " VALUES ('"+ IdDriver +"','"+ name +"','"+SIMNum+"','"+RentPrice+"','"+status+"')";
                 stat = con.createStatement();
                 stat.executeQuery(sql);
