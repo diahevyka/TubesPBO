@@ -13,10 +13,15 @@ package Controller;
 
 import Model.*;
 import View.*;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.*;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.Timer;
 
-public class login_controller extends MouseAdapter implements FocusListener{
+public class login_controller extends MouseAdapter implements FocusListener,KeyListener{
     
     private Login L;
     private Loading Lo = new Loading();
@@ -37,6 +42,7 @@ public class login_controller extends MouseAdapter implements FocusListener{
             L = new Login();
             L.addMouseAdapter(this);
             L.addFocusListener(this);
+            L.addKeyListener(this);
             L.setVisible(true);
         } else {
             new ErrorMassage().setVisible(true);
@@ -46,10 +52,8 @@ public class login_controller extends MouseAdapter implements FocusListener{
     public void mousePressed(MouseEvent e){
         Object O = e.getSource();
         if (O.equals(L.getTUsername())){
-            L.getTUsername().setText("");
             L.getErrorMassage().setText("");
         } else if (O.equals(L.getTPassword())){
-            L.getTPassword().setText("");
             L.getErrorMassage().setText("");
         } else if (O.equals(L.getTExit())){
             System.exit(0);
@@ -85,15 +89,73 @@ public class login_controller extends MouseAdapter implements FocusListener{
             if (L.getTUsername().getText().equals("username")){
                 L.getTUsername().setText("");
             }
+            L.getErrorMassage().setText("");
         } else if (O.equals(L.getTPassword())){
             if (L.getTPassword().getText().equals("password")){
                 L.getTPassword().setText("");
             }
+            L.getErrorMassage().setText("");
         }
     }
 
     @Override
     public void focusLost(FocusEvent e) {
         
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        Object O = e.getSource();
+        int key = e.getKeyCode();
+        if (O.equals(L.getTUsername())){
+            if (key == KeyEvent.VK_ENTER){
+                ac = new Account(L.getTUsername().getText(),L.getTPassword().getText());
+                try{
+                    sql = "Select * from account where UserName='"+ac.getUserName()+"' And password='"+ac.getPassword()+"'";
+                    rs = stat.executeQuery(sql);
+                    if(rs.next()){
+                        if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
+                            L.setVisible(false);
+                            new main_controller(ac);
+                        }
+                    } else {
+                        L.getErrorMassage().setText("Invalid Username or Password");
+                    }
+                }catch(Exception ex){
+
+                }
+            }
+        } else if (O.equals(L.getTPassword())){
+            if (key == KeyEvent.VK_ENTER){
+                ac = new Account(L.getTUsername().getText(),L.getTPassword().getText());
+                try{
+                    sql = "Select * from account where UserName='"+ac.getUserName()+"' And password='"+ac.getPassword()+"'";
+                    rs = stat.executeQuery(sql);
+                    if(rs.next()){
+                        if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
+                            L.setVisible(false);
+                            new main_controller(ac);
+                        }
+                        else{
+
+                        }
+                    } else {
+                        L.getErrorMassage().setText("Invalid Username or Password");
+                    }
+                }catch(Exception ex){
+
+                }
+            }
+        }
     }
 }
