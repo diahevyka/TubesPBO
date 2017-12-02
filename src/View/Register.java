@@ -57,7 +57,7 @@ public class Register extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         panel = new javax.swing.JPanel();
         ErrorMassage = new javax.swing.JLabel();
-        BtnBack = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -185,10 +185,9 @@ public class Register extends javax.swing.JFrame {
         ErrorMassage.setText("Username already exist");
         panel.add(ErrorMassage, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 140, -1));
 
-        BtnBack.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        BtnBack.setForeground(new java.awt.Color(204, 204, 204));
-        BtnBack.setText("back");
-        BtnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setText("back");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -247,7 +246,7 @@ public class Register extends javax.swing.JFrame {
                         .addComponent(BtnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(189, 189, 189)
-                        .addComponent(BtnBack)))
+                        .addComponent(jLabel1)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -302,7 +301,7 @@ public class Register extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BtnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
-                .addComponent(BtnBack)
+                .addComponent(jLabel1)
                 .addGap(16, 16, 16))
         );
 
@@ -368,10 +367,6 @@ public class Register extends javax.swing.JFrame {
         return jExit;
     }
     
-    public JLabel getBtnBack(){
-        return BtnBack;
-    }
-    
     public void addMouseAdapter(MouseAdapter e){
         BtnRegister.addMouseListener(e);
         jUsername.addMouseListener(e);
@@ -393,13 +388,13 @@ public class Register extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BtnBack;
     private javax.swing.JPanel BtnRegister;
     private javax.swing.JLabel ErrorMassage;
     private javax.swing.JPanel bg;
     private javax.swing.JTextField jAddress;
     private javax.swing.JTextField jEmail;
     private javax.swing.JLabel jExit;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

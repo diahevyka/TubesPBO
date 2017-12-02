@@ -91,13 +91,13 @@ public class Main extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         pDriver = new javax.swing.JPanel();
-        btnEdit = new javax.swing.JPanel();
+        btnEditD = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        btnDelete = new javax.swing.JPanel();
+        btnDeleteD = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tblDriver = new javax.swing.JTable();
-        btnView = new javax.swing.JPanel();
+        btnViewD = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         newDriver = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -422,7 +422,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         jSaveLayout.setVerticalGroup(
             jSaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -722,49 +722,49 @@ public class Main extends javax.swing.JFrame {
         pDriver.setBackground(new java.awt.Color(102, 102, 102));
         pDriver.setPreferredSize(new java.awt.Dimension(604, 460));
 
-        btnEdit.setBackground(new java.awt.Color(0, 153, 204));
-        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
-        btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditD.setBackground(new java.awt.Color(0, 153, 204));
+        btnEditD.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel15.setBackground(new java.awt.Color(102, 102, 102));
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("EDIT");
 
-        javax.swing.GroupLayout btnEditLayout = new javax.swing.GroupLayout(btnEdit);
-        btnEdit.setLayout(btnEditLayout);
-        btnEditLayout.setHorizontalGroup(
-            btnEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEditLayout.createSequentialGroup()
+        javax.swing.GroupLayout btnEditDLayout = new javax.swing.GroupLayout(btnEditD);
+        btnEditD.setLayout(btnEditDLayout);
+        btnEditDLayout.setHorizontalGroup(
+            btnEditDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEditDLayout.createSequentialGroup()
                 .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jLabel15)
                 .addGap(26, 26, 26))
         );
-        btnEditLayout.setVerticalGroup(
-            btnEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        btnEditDLayout.setVerticalGroup(
+            btnEditDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        btnDelete.setBackground(new java.awt.Color(0, 153, 204));
-        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
-        btnDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDeleteD.setBackground(new java.awt.Color(0, 153, 204));
+        btnDeleteD.setForeground(new java.awt.Color(255, 255, 255));
+        btnDeleteD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel27.setBackground(new java.awt.Color(102, 102, 102));
         jLabel27.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("DELETE");
 
-        javax.swing.GroupLayout btnDeleteLayout = new javax.swing.GroupLayout(btnDelete);
-        btnDelete.setLayout(btnDeleteLayout);
-        btnDeleteLayout.setHorizontalGroup(
-            btnDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnDeleteLayout.createSequentialGroup()
+        javax.swing.GroupLayout btnDeleteDLayout = new javax.swing.GroupLayout(btnDeleteD);
+        btnDeleteD.setLayout(btnDeleteDLayout);
+        btnDeleteDLayout.setHorizontalGroup(
+            btnDeleteDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnDeleteDLayout.createSequentialGroup()
                 .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(jLabel27)
                 .addGap(20, 20, 20))
         );
-        btnDeleteLayout.setVerticalGroup(
-            btnDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        btnDeleteDLayout.setVerticalGroup(
+            btnDeleteDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
         );
 
@@ -784,26 +784,26 @@ public class Main extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(tblDriver);
 
-        btnView.setBackground(new java.awt.Color(0, 153, 204));
-        btnView.setForeground(new java.awt.Color(255, 255, 255));
-        btnView.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnViewD.setBackground(new java.awt.Color(0, 153, 204));
+        btnViewD.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel28.setBackground(new java.awt.Color(102, 102, 102));
         jLabel28.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("VIEW");
 
-        javax.swing.GroupLayout btnViewLayout = new javax.swing.GroupLayout(btnView);
-        btnView.setLayout(btnViewLayout);
-        btnViewLayout.setHorizontalGroup(
-            btnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnViewLayout.createSequentialGroup()
+        javax.swing.GroupLayout btnViewDLayout = new javax.swing.GroupLayout(btnViewD);
+        btnViewD.setLayout(btnViewDLayout);
+        btnViewDLayout.setHorizontalGroup(
+            btnViewDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnViewDLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(jLabel28)
                 .addContainerGap(34, Short.MAX_VALUE))
         );
-        btnViewLayout.setVerticalGroup(
-            btnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        btnViewDLayout.setVerticalGroup(
+            btnViewDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -848,11 +848,11 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(pDriverLayout.createSequentialGroup()
                         .addComponent(newDriver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
-                        .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnViewD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
-                        .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEditD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnDeleteD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         pDriverLayout.setVerticalGroup(
@@ -861,9 +861,9 @@ public class Main extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(pDriverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(newDriver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnEditD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnViewD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDeleteD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(286, Short.MAX_VALUE))
@@ -943,8 +943,10 @@ public class Main extends javax.swing.JFrame {
         jEdit.addMouseListener(e);
         jSave.addMouseListener(e);
         newLend.addMouseListener(e);
-        btnEdit.addMouseListener(e);
-        btnDelete.addMouseListener(e);
+        btnEditD.addMouseListener(e);
+        btnDeleteD.addMouseListener(e);
+        newDriver.addMouseListener(e);
+        btnViewD.addMouseListener(e);
     }
     
     public JLabel getBtnExit(){
@@ -978,15 +980,15 @@ public class Main extends javax.swing.JFrame {
     }
     
     public JPanel getEditDriver(){
-        return btnEdit;
+        return btnEditD;
     }
     
     public JPanel getDeleteDriver(){
-        return btnDelete;
+        return btnDeleteD;
     }
     
     public JPanel getViewDriver(){
-        return btnView;
+        return btnViewD;
     }
     
     public JTable getTable(){
@@ -1007,9 +1009,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel Navigation;
     private javax.swing.JPanel bNew;
     private javax.swing.JPanel bg;
-    private javax.swing.JPanel btnDelete;
-    private javax.swing.JPanel btnEdit;
-    private javax.swing.JPanel btnView;
+    private javax.swing.JPanel btnDeleteD;
+    private javax.swing.JPanel btnEditD;
+    private javax.swing.JPanel btnViewD;
     private javax.swing.JTextField jAddress;
     private javax.swing.JPanel jEdit;
     private javax.swing.JTextField jEmail;
