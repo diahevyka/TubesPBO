@@ -15,6 +15,7 @@ import Model.Driver;
 import View.*;
 import java.awt.event.*;
 import java.sql.*;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class main_controller extends MouseAdapter {
@@ -27,6 +28,7 @@ public class main_controller extends MouseAdapter {
     private Main M;
     private Employee em;
     private DefaultTableModel model;
+    String id, nama, sim, harga, stt;
     
     public main_controller(Account ac) {
         M = new Main();
@@ -110,43 +112,44 @@ public class main_controller extends MouseAdapter {
         }
         else if (O.equals(M.getDeleteDriver())){
             try{
+                String idDriver = M.getTable().getValueAt(M.getTable().getSelectedRow(), 0).toString();
+                sql = "DELETE from driver where idDriver = '"+idDriver+"'";
+                stat = conn.createStatement();
+                stat.executeUpdate(sql);
+                JOptionPane.showMessageDialog(null, "Penghapusan Data Berhasil");
+            } catch(Exception ex){
                 
-            }catch(Exception ex){
-                System.out.println(ex);
             }
         }
         else if (O.equals(M.getEditDriver())){
-            try{
-//                sql = "update Driver set "
-            }catch(Exception ex){
-                System.out.println(ex);
-            }
+            M.setVisible(false);
+            String idDriver = M.getTable().getValueAt(M.getTable().getSelectedRow(), 0).toString();
+            String nama = M.getTable().getValueAt(M.getTable().getSelectedRow(), 1).toString();
+            String noSIM = M.getTable().getValueAt(M.getTable().getSelectedRow(), 2).toString();
+            String harga = M.getTable().getValueAt(M.getTable().getSelectedRow(), 3).toString();
+            String status = M.getTable().getValueAt(M.getTable().getSelectedRow(), 4).toString();
+            new driver_controller(idDriver, nama, noSIM, harga, status);
         }
         
         else if (O.equals(M.getViewDriver())){
+            model = new DefaultTableModel();
+            M.getTable().setModel(model);
+            
+            model.addColumn("ID Driver");
+            model.addColumn("Nama Driver");
+            model.addColumn("No SIM");
+            model.addColumn("Harga Sewa");
+            model.addColumn("Status");
             try{
-                model = new DefaultTableModel();
-                M.getTable().setModel(model);
-
-                sql = "Select * from Driver";
+                int i = 1;
+                sql = "Select * from driver";
+                stat = conn.createStatement();
                 rs = stat.executeQuery(sql);
                 while(rs.next()){
-                    Object[] ob = new Object[5];
-                    ob[0] = rs.getString("idDriver");
-                    ob[1] = rs.getString("Name");
-                    ob[2] = rs.getString("SIMNum");
-                    ob[3] = rs.getString("rentPrice");
-                    ob[4] = rs.getString("status");
-                    
-                    model.addRow(ob);
+                    model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)});
+                    i++;
                 }
-                
-                model.addColumn("ID Driver");
-                model.addColumn("Nama Driver");
-                model.addColumn("No SIM");
-                model.addColumn("Harga Sewa");
-                model.addColumn("Status");
-                
+                M.getTable().setModel(model);
             }catch(Exception ex){
                 System.out.println(ex);
             }
