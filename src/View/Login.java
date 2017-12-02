@@ -11,6 +11,7 @@ package View;
  */
 
 import java.awt.event.FocusListener;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.*;
 
@@ -330,6 +331,11 @@ public class Login extends javax.swing.JFrame {
         jExit.addMouseListener(e);
         jLogin.addMouseListener(e);
         jRegister.addMouseListener(e);
+    }
+    
+    public void addKeyListener(KeyListener e){
+        jUsername.addKeyListener(e);
+        jPassword.addKeyListener(e);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
