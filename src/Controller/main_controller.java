@@ -159,7 +159,8 @@ public class main_controller extends MouseAdapter {
                 System.out.println(ex);
             }
         }else if (O.equals(M.getNewRent())){
-            
+            M.setVisible(false);
+            new rent_controller();
         }
     }
     

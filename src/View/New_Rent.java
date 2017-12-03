@@ -56,6 +56,14 @@ public class New_Rent extends javax.swing.JFrame {
         return jError;
     }
     
+    public JComboBox getTType(){
+        return jCBtype;
+    }
+    
+    public JComboBox getTMerk(){
+        return jCBmerk;
+    }
+    
     public void addMouseAdapter(MouseAdapter e){
         BtnCancel.addMouseListener(e);
         BtnLend.addMouseListener(e);
@@ -90,8 +98,8 @@ public class New_Rent extends javax.swing.JFrame {
         jError = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
-        jCBtype = new javax.swing.JComboBox<>();
-        jCBmerk = new javax.swing.JComboBox<>();
+        jCBtype = new javax.swing.JComboBox<String>();
+        jCBmerk = new javax.swing.JComboBox<String>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -102,7 +110,7 @@ public class New_Rent extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-account-60.png"))); // NOI18N
-        jLabel2.setText("OWNER");
+        jLabel2.setText("CUSTOMER");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
@@ -288,9 +296,9 @@ public class New_Rent extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(51, 51, 51));
         jLabel16.setText("Merk");
 
-        jCBtype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCBtype.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jCBmerk.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCBmerk.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
@@ -325,7 +333,7 @@ public class New_Rent extends javax.swing.JFrame {
                     .addGroup(bgLayout.createSequentialGroup()
                         .addGap(159, 159, 159)
                         .addComponent(jError)))
-                .addGap(57, 57, 57)
+                .addGap(74, 74, 74)
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(bgLayout.createSequentialGroup()
                         .addComponent(BtnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -353,7 +361,7 @@ public class New_Rent extends javax.swing.JFrame {
                                 .addComponent(jLabel11))
                             .addComponent(jCBtype, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCBmerk, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -390,12 +398,10 @@ public class New_Rent extends javax.swing.JFrame {
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bgLayout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel7))
                     .addGroup(bgLayout.createSequentialGroup()
                         .addGap(67, 67, 67)
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel12)))
                 .addGap(61, 61, 61)
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
