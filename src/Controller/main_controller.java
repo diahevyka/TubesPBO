@@ -11,7 +11,6 @@ package Controller;
  */
 
 import Model.*;
-import Model.Driver;
 import View.*;
 import java.awt.event.*;
 import java.sql.*;
@@ -20,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class main_controller extends MouseAdapter {
     
-    private Driver dr;
+    private Model.Driver dr;
     private String sql;
     private Connection conn;
     private Statement stat;
@@ -105,12 +104,21 @@ public class main_controller extends MouseAdapter {
             new lend_controller();
         } else if (O.equals(M.getBtnSave())){
             M.savee();
+            em.setName(M.getFName().getText());
+            em.setEmail(M.getFEmail().getText());
+            em.setAddress(M.getFAddress().getText());
+            em.setPhone(M.getFPhone().getText());
+            try {
+                sql = "update employee join account using(username) set name = '"+em.getName()+"', email = '"+em.getEmail()+"', Address = '"+em.getAddress()+"', Phone = '"+em.getPhone()+"' where account.UserName = '"+em.getAccount().getUserName()+"'";
+                stat.executeUpdate(sql);
+            } catch (Exception ex){
+                System.out.println("error");
+            }
             M.getBtnSave().setVisible(false);
         } else if (O.equals(M.getBtnnewDriver())){
             M.setVisible(false);
             new driver_controller();
-        }
-        else if (O.equals(M.getDeleteDriver())){
+        } else if (O.equals(M.getDeleteDriver())){
             try{
                 String idDriver = M.getTable().getValueAt(M.getTable().getSelectedRow(), 0).toString();
                 sql = "DELETE from driver where idDriver = '"+idDriver+"'";
@@ -120,8 +128,7 @@ public class main_controller extends MouseAdapter {
             } catch(Exception ex){
                 
             }
-        }
-        else if (O.equals(M.getEditDriver())){
+        } else if (O.equals(M.getEditDriver())){
             M.setVisible(false);
             String idDriver = M.getTable().getValueAt(M.getTable().getSelectedRow(), 0).toString();
             String nama = M.getTable().getValueAt(M.getTable().getSelectedRow(), 1).toString();
@@ -129,9 +136,7 @@ public class main_controller extends MouseAdapter {
             String harga = M.getTable().getValueAt(M.getTable().getSelectedRow(), 3).toString();
             String status = M.getTable().getValueAt(M.getTable().getSelectedRow(), 4).toString();
             new driver_controller(idDriver, nama, noSIM, harga, status);
-        }
-        
-        else if (O.equals(M.getViewDriver())){
+        } else if (O.equals(M.getViewDriver())){
             model = new DefaultTableModel();
             M.getTable().setModel(model);
             

@@ -5,7 +5,6 @@
  */
 package Controller;
 
-
 /**
  *
  * @author Atta
@@ -13,18 +12,12 @@ package Controller;
 
 import Model.*;
 import View.*;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.awt.event.*;
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.Timer;
 
 public class login_controller extends MouseAdapter implements FocusListener,KeyListener{
     
     private Login L;
-    private Loading Lo = new Loading();
     private Account ac;
     private String sql;
     private Connection conn;
@@ -145,9 +138,6 @@ public class login_controller extends MouseAdapter implements FocusListener,KeyL
                         if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
                             L.setVisible(false);
                             new main_controller(ac);
-                        }
-                        else{
-
                         }
                     } else {
                         L.getErrorMassage().setText("Invalid Username or Password");

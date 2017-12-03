@@ -10,9 +10,7 @@ package View;
  * @author Atta
  */
 
-import java.awt.event.FocusListener;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
+import java.awt.event.*;
 import javax.swing.*;
 
 public class Login extends javax.swing.JFrame {
@@ -167,15 +165,11 @@ public class Login extends javax.swing.JFrame {
 
         jExit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jExit.setForeground(new java.awt.Color(204, 204, 204));
-        jExit.setText("   X ");
+        jExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jExit.setText("X");
 
         panel.setBackground(new java.awt.Color(51, 51, 51));
         panel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        panel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                panelMouseClicked(evt);
-            }
-        });
 
         ErrorMassage.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -229,13 +223,13 @@ public class Login extends javax.swing.JFrame {
                         .addGap(63, 63, 63))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jExit, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         loginLayout.setVerticalGroup(
             loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginLayout.createSequentialGroup()
-                .addComponent(jExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
+                .addComponent(jExit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -287,10 +281,6 @@ public class Login extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(402, 392));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void panelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelMouseClicked
-
-    }//GEN-LAST:event_panelMouseClicked
 
     public JTextField getTUsername(){
         return jUsername;

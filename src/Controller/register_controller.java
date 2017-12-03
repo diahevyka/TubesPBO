@@ -13,18 +13,15 @@ import java.awt.event.MouseAdapter;
  */
 
 import View.*;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import Model.*;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 public class register_controller extends MouseAdapter implements FocusListener {
     private Register R;
-    private Database db = new Database();
+    private Database db;
     private String sql;
     private Connection conn = db.con;
     private ResultSet rs;
@@ -33,6 +30,7 @@ public class register_controller extends MouseAdapter implements FocusListener {
     
     public register_controller(){
         R = new Register();
+        db = new Database();
         R.addMouseAdapter(this);
         R.addFocusListener(this);
         R.setVisible(true);
@@ -71,20 +69,11 @@ public class register_controller extends MouseAdapter implements FocusListener {
             } catch (Exception ex) {
                 System.out.println(ex);
             }
-        } else if (O.equals(R.getTUsername())){
-            R.getTUsername().setText("");
-        } else if (O.equals(R.getTName())){
-            R.getTName().setText("");
-        } else if (O.equals(R.getTEmail())){
-            R.getTEmail().setText("");
-        } else if (O.equals(R.getTAddress())){
-            R.getTAddress().setText("");
-        } else if (O.equals(R.getTPhone())){
-            R.getTPhone().setText("");
-        } else if (O.equals(R.getTPassword())){
-            R.getTPassword().setText("");
         } else if(O.equals(R.BtnExit())){
             System.exit(0);
+        } else if(O.equals(R.BtnBack())){
+            R.setVisible(false);
+            new login_controller();
         }
     }
 
@@ -107,8 +96,19 @@ public class register_controller extends MouseAdapter implements FocusListener {
                 R.getTEmail().setText("");
             }
         } else if (O.equals(R.getTAddress())){
+            R.getErrorMassage().setVisible(false);
             if (R.getTAddress().getText().equals("address")){
                 R.getTAddress().setText("");
+            }
+        } else if (O.equals(R.getTPhone())){
+            R.getErrorMassage().setVisible(false);
+            if (R.getTPhone().getText().equals("phone")){
+                R.getTPhone().setText("");
+            }
+        } else if (O.equals(R.getTName())){
+            R.getErrorMassage().setVisible(false);
+            if (R.getTName().getText().equals("name")){
+                R.getTName().setText("");
             }
         }
     }
