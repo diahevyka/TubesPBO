@@ -947,6 +947,7 @@ public class Main extends javax.swing.JFrame {
         btnDeleteD.addMouseListener(e);
         newDriver.addMouseListener(e);
         btnViewD.addMouseListener(e);
+        bNew.addMouseListener(e);
     }
     
     public JLabel getBtnExit(){
@@ -993,6 +994,10 @@ public class Main extends javax.swing.JFrame {
     
     public JTable getTable(){
         return tblDriver;
+    }
+    
+    public JPanel getNewRent(){
+        return bNew;
     }
     
     public void savee(){

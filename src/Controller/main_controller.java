@@ -158,6 +158,8 @@ public class main_controller extends MouseAdapter {
             }catch(Exception ex){
                 System.out.println(ex);
             }
+        }else if (O.equals(M.getNewRent())){
+            
         }
     }
     
