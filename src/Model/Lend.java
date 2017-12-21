@@ -13,7 +13,6 @@ import java.util.Date;
  * @author Windows 8.1
  */
 public class Lend implements Price {
-    private String idLend;
     private String lendDate;
     private Owner owner;
     private Cars car;
@@ -43,14 +42,6 @@ public class Lend implements Price {
 
     public void setCar(Cars car) {
         this.car = car;
-    }
-
-    public String getIdLend() {
-        return idLend;
-    }
-
-    public void setIdLend(String idLend) {
-        this.idLend = idLend;
     }
 
     public String getLendDate() {

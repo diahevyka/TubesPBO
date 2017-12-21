@@ -11,11 +11,12 @@ package Model;
  * @author Windows 8.1
  */
 public class Owner extends User{
-    private String idOwner;
+    private String noktp;
     private String email;
 
-    public Owner(String idOwner, String name, String email, String address, String phone) {  
+    public Owner(String noktp, String name, String email, String address, String phone) {  
         super(name, address, phone);   
+        this.noktp = noktp;
         this.email = email;
     }
 
@@ -23,12 +24,12 @@ public class Owner extends User{
         this.email = email;
     }
 
-    public String getIdOwner() {
-        return idOwner;
+    public String getNoktp() {
+        return this.noktp;
     }
 
-    public void setIdOwner(String idOwner) {
-        this.idOwner = idOwner;
+    public void setNoktp(String noktp) {
+        this.noktp = noktp;
     }
 
     public String getName() {

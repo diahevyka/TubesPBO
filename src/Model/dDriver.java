@@ -10,15 +10,14 @@ package Model;
  *
  * @author Windows 8.1
  */
-public class Driver {  
-    private String name;
+public class dDriver extends User{
     private String SIMnum;
-    private int rentPrice;
-    private boolean status;
+    private double rentPrice;
+    private int status = 0;
 
 
-    public Driver(String name, String SIMnum, int rentPrice, boolean status) {
-        this.name = name;
+    public dDriver(String name, String address, String phone, String SIMnum, double rentPrice,int status) {
+        super(name,address,phone);
         this.SIMnum = SIMnum;
         this.rentPrice = rentPrice;
         this.status = status;
@@ -41,7 +40,7 @@ public class Driver {
         this.SIMnum = SIMnum;
     }
 
-    public int getRentPrice() {
+    public double getRentPrice() {
         return rentPrice;
     }
 
@@ -49,11 +48,11 @@ public class Driver {
         this.rentPrice = rentPrice;
     }
 
-    public boolean isStatus() {
+    public int isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(int status) {
         this.status = status;
     }
     

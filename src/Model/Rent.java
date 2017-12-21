@@ -13,18 +13,16 @@ import java.util.Date;
  * @author Windows 8.1
  */
 public class Rent implements Price{
-    private String idTransaction;
-    private Date borrowDate;
-    private Date returnDate;
+    private String borrowDate;
+    private String returnDate;
     private Customer customer;
     private Employee employee;
     private Cars car;
-    private Driver driver;
+    private dDriver driver;
     private double price;
     
     
-     public Rent(String idTransaction, Date borrowDate, Date returnDate, Customer customer, Employee employee, Cars car, Driver driver) {
-        this.idTransaction = idTransaction;
+     public Rent(String borrowDate, String returnDate, Customer customer, Employee employee, Cars car, dDriver driver) {
         this.borrowDate = borrowDate;
         this.returnDate = returnDate;
         this.customer = customer;
@@ -33,11 +31,40 @@ public class Rent implements Price{
         this.driver = driver;
     }
 
-    public void setBorrowDate(Date borrowDate) {
+    public Rent(String borrowDate, String returnDate, Customer customer, Employee employee, Cars car) {
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
+        this.customer = customer;
+        this.employee = employee;
+        this.car = car;
+    }
+    
+    public Rent(String borrowDate, String returnDate, Customer customer, Employee employee, Cars car, int dur) {
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
+        this.customer = customer;
+        this.employee = employee;
+        this.car = car;
+        this.price = dur*car.getPrice();
+    }
+    
+     public Rent(String borrowDate, String returnDate, Customer customer, Employee employee, Cars car, int dur, dDriver dr) {
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
+        this.customer = customer;
+        this.employee = employee;
+        this.car = car;
+        this.driver = dr;
+        this.price = dur*car.getPrice() + dur*dr.getRentPrice();
+    }
+     
+    
+
+    public void setBorrowDate(String borrowDate) {
         this.borrowDate = borrowDate;
     }
 
-    public void setReturnDate(Date returnDate) {
+    public void setReturnDate(String returnDate) {
         this.returnDate = returnDate;
     }
 
@@ -53,19 +80,11 @@ public class Rent implements Price{
         this.car = car;
     }
 
-    public void setIdTransaction(String idTransaction) {
-        this.idTransaction = idTransaction;
-    }
-
-    public String getIdTransaction() {
-        return idTransaction;
-    }
-
-    public Date getBorrowDate() {
+    public String getBorrowDate() {
         return borrowDate;
     }
 
-    public Date getReturnDate() {
+    public String getReturnDate() {
         return returnDate;
     }
 
@@ -81,11 +100,11 @@ public class Rent implements Price{
         return car;
     }
 
-    public void setDriver(Driver driver) {
+    public void setDriver(dDriver driver) {
         this.driver = driver;
     }
 
-    public Driver getDriver() {
+    public dDriver getDriver() {
         return driver;
     }
 

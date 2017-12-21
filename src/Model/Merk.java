@@ -6,6 +6,8 @@
 
 package Model;
 
+import java.util.Random;
+
 /**
  *
  * @author Windows 8.1
@@ -13,10 +15,42 @@ package Model;
 public class Merk {
     private String idMerk;
     private String name;
+    private int i=1;
 
     public Merk(String idMerk, String name) {
         this.idMerk = idMerk;
         this.name = name;
+    }
+
+    public Merk(String name) {
+        this.idMerk = RandomS()+RandomN();
+        this.name = name;
+    }
+    
+    protected String RandomS() {
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 2) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+
+    }
+    
+    protected String RandomN() {
+        String SALTCHARS = "01234567";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 1) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+
     }
 
     public void setIdMerk(String idMerk) {

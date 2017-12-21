@@ -63,7 +63,7 @@ public class register_controller extends MouseAdapter implements FocusListener {
                             new login_controller();
                         }
                     } catch (Exception ex) {
-
+                        System.out.println(ex);
                     }
                 }
             } catch (Exception ex) {

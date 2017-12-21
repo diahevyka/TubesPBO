@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package View;
 
 import java.awt.event.FocusListener;
@@ -67,7 +68,7 @@ public class Register extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
         jUsername.setBackground(new java.awt.Color(51, 51, 51));
-        jUsername.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jUsername.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jUsername.setForeground(new java.awt.Color(255, 255, 255));
         jUsername.setText("username");
         jUsername.setToolTipText("");
@@ -79,7 +80,7 @@ public class Register extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
 
         jName.setBackground(new java.awt.Color(51, 51, 51));
-        jName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jName.setForeground(new java.awt.Color(255, 255, 255));
         jName.setText("name");
         jName.setToolTipText("");
@@ -93,7 +94,7 @@ public class Register extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-user (2).png"))); // NOI18N
 
         jEmail.setBackground(new java.awt.Color(51, 51, 51));
-        jEmail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jEmail.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jEmail.setForeground(new java.awt.Color(255, 255, 255));
         jEmail.setText("email");
         jEmail.setToolTipText("");
@@ -107,7 +108,7 @@ public class Register extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-message.png"))); // NOI18N
 
         jAddress.setBackground(new java.awt.Color(51, 51, 51));
-        jAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jAddress.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jAddress.setForeground(new java.awt.Color(255, 255, 255));
         jAddress.setText("address");
         jAddress.setToolTipText("");
@@ -121,7 +122,7 @@ public class Register extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-address.png"))); // NOI18N
 
         jPhone.setBackground(new java.awt.Color(51, 51, 51));
-        jPhone.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jPhone.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jPhone.setForeground(new java.awt.Color(255, 255, 255));
         jPhone.setText("phone");
         jPhone.setToolTipText("");
@@ -137,7 +138,7 @@ public class Register extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-lock.png"))); // NOI18N
 
         jPassword.setBackground(new java.awt.Color(51, 51, 51));
-        jPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jPassword.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jPassword.setForeground(new java.awt.Color(255, 255, 255));
         jPassword.setText("password");
         jPassword.setBorder(null);
@@ -181,11 +182,12 @@ public class Register extends javax.swing.JFrame {
         panel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ErrorMassage.setForeground(new java.awt.Color(204, 204, 204));
+        ErrorMassage.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        ErrorMassage.setForeground(new java.awt.Color(255, 255, 255));
         ErrorMassage.setText("Username already exist");
         panel.add(ErrorMassage, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 140, -1));
 
-        BtnBack.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        BtnBack.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
         BtnBack.setForeground(new java.awt.Color(204, 204, 204));
         BtnBack.setText("back");
         BtnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -310,7 +312,9 @@ public class Register extends javax.swing.JFrame {
         bg.setLayout(bgLayout);
         bgLayout.setHorizontalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(bgLayout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

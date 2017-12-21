@@ -84,7 +84,7 @@ public class Login extends javax.swing.JFrame {
         login.setDoubleBuffered(false);
 
         jUsername.setBackground(new java.awt.Color(51, 51, 51));
-        jUsername.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jUsername.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jUsername.setForeground(new java.awt.Color(255, 255, 255));
         jUsername.setText("username");
         jUsername.setToolTipText("");
@@ -153,7 +153,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         jPassword.setBackground(new java.awt.Color(51, 51, 51));
-        jPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPassword.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jPassword.setForeground(new java.awt.Color(255, 255, 255));
         jPassword.setText("password");
         jPassword.setBorder(null);

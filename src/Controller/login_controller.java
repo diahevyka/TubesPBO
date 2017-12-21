@@ -26,7 +26,6 @@ public class login_controller extends MouseAdapter implements FocusListener,KeyL
     
     public login_controller(){
         Database db = new Database();
-        
         db.connect();
         conn = db.con;
         stat = db.stm;
@@ -56,18 +55,13 @@ public class login_controller extends MouseAdapter implements FocusListener,KeyL
                 sql = "Select * from account where UserName='"+ac.getUserName()+"' And password='"+ac.getPassword()+"'";
                 rs = stat.executeQuery(sql);
                 if(rs.next()){
-                    if(ac.getUserName().equals(rs.getString("UserName")) && ac.getPassword().equals(rs.getString("password"))){
-                        L.setVisible(false);
-                        new main_controller(ac);
-                    }
-                    else{
-                        
-                    }
+                    L.setVisible(false);
+                    new main_controller(ac);
                 } else {
                     L.getErrorMassage().setText("Invalid Username or Password");
                 }
             }catch(Exception ex){
-                
+                System.out.println(ex);
             }
         } else if (O.equals(L.BtnRegister())){
             L.setVisible(false);
@@ -125,7 +119,7 @@ public class login_controller extends MouseAdapter implements FocusListener,KeyL
                         L.getErrorMassage().setText("Invalid Username or Password");
                     }
                 }catch(Exception ex){
-
+                    System.out.println(ex);
                 }
             }
         } else if (O.equals(L.getTPassword())){
@@ -143,7 +137,7 @@ public class login_controller extends MouseAdapter implements FocusListener,KeyL
                         L.getErrorMassage().setText("Invalid Username or Password");
                     }
                 }catch(Exception ex){
-
+                    System.out.println(ex);
                 }
             }
         }

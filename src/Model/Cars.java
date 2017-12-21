@@ -11,29 +11,30 @@ package Model;
  * @author Windows 8.1
  */
 public class Cars implements Price{
-    private String idCar;
+    private String noplat;
     private boolean status;
     private Type type;
     private Merk merk;
     private double rentPrice;
 
-    public Cars(String idCar, double rentPrice, Type type, Merk merk) {
-        this.idCar = idCar;
+    public Cars(String noplat, Type type, Merk merk, Double price,boolean status) {
+        this.noplat = noplat;
         this.type = type;
         this.merk = merk;
-        this.rentPrice= rentPrice;
+        this.rentPrice = price;
+        this.status = status;
     }
 
-    public void setIdCar(String idCar) {
-        this.idCar = idCar;
+    public void setnoplat(String noplat) {
+        this.noplat= noplat;
     }
 
-    public String getIdCar() {
-        return idCar;
+    public String getNoplat() {
+        return noplat;
     }
     
     public double getPrice() {
-        return 0;
+        return rentPrice;
     }
 
     public void setStatus(boolean status) {
